@@ -1,0 +1,22 @@
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .column {
+    float: left;
+    width: 100%;
+  }
+}
