@@ -83,7 +83,7 @@ const Hero = ({
               </div>
               <div className="column">
                 <div>
-                <img src="abc.gif" alt=""/>
+                <img src="haiti.png" alt="" style={{width:"70%"}}/>
                 </div>
               </div>
             </div>
