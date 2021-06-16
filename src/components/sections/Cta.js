@@ -41,15 +41,19 @@ const Cta = ({
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
   );  
+ 
+
+  const [_email,setEM] = React.useState('');
 
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container" style={{backgroundColor:"#3d946e"}}>
         <div
           className={innerClasses}
+          style={{backgroundColor:"#3d946e"}}
         >
           <div className="cta-slogan">
             <h3 className="m-0">
@@ -57,7 +61,7 @@ const Cta = ({
               </h3>
           </div>
           <div className="cta-action">
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Enter Your Email">
+            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Enter Your Email" name="newsletter" onChange={ (e) => setEM(e.target.value)}>  
               <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
               </svg>

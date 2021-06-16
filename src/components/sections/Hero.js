@@ -62,22 +62,35 @@ const Hero = ({
           <div className="hero-content" >
             <div className="row">
               <div className="column">
-                <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-                  Landing Page For <span className="text-color-primary">Saviour</span>
-                </h1>
+                {/* <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
+                  Be a <span className="text-color-primary" style={{color:"#8DD9CC"}}>Hero!</span>
+                </h1> */}
                 <div className="container-xs">
-                  <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                  </p>
+                    <div style={{textAlign:"left", marginTop:"2%", marginLeft:"1%"}}>
+                    <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
+                      Be a <span className="text-color-primary" style={{color:"#3d946e"}}>Hero!</span>
+                    </h1>
+                      <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
+                        Virtually Adopt a Child For His Education
+                      </p>
+                    </div>
                   <div className="reveal-from-bottom" data-reveal-delay="600">
                     <ButtonGroup>
-                      <Button tag="a" color="primary" wideMobile href="#">
+                      <Button tag="a" color="primary" wideMobile href="/Signup_Donor" style={{backgroundColor:"#3d946e"}}>
                         Adopt Now
                         </Button>
-                      <Button tag="a" color="dark" wideMobile href="#">
+                      <Button tag="a" color="dark" wideMobile href="/Signup_Student" style={{backgroundColor:"#3d946e"}}>
                         Student
-                        </Button>
+                      </Button>
                     </ButtonGroup>
+                    <div style={{textAlign:"right", marginTop:"2%"}}>
+                      <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
+                        Student?
+                      </h1>
+                      <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
+                        Join Here
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
