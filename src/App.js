@@ -11,6 +11,10 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 import LoginDonor from './views/LoginDonor';
 import SignupDonor from './views/SignupDonor';
+import Dash1Donor from './views/DashboardprimaryDonor';
+import Dash2Donor from './views/DashboardsecondaryDonor';
+import Dash3Donor from './views/DashboardtertiaryDonor';
+import Dash4Donor from './views/DashboardquaternaryDonor';
 import LoginStudent from './views/LoginStudent';
 import SignupStudent from './views/SignupStudent';
 
@@ -42,6 +46,10 @@ const App = () => {
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Donor" component={LoginDonor} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Donor" component={SignupDonor} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard1_Donor" component={Dash1Donor} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard2_Donor" component={Dash2Donor} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard3_Donor" component={Dash3Donor} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />
         </Switch>

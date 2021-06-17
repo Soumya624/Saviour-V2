@@ -98,13 +98,13 @@ const FeaturesSplit = ({
                   </div>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone" name="phone" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Standard" name="standard" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="number" hasIcon="right" placeholder="Your Standard" name="standard" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
                   <br/>
                   <br/>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Introduction (50 Words)" name="intro" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Introduction (50 Words)" name="intro" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey", height:"5rem"}}>  
                   </Input>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Body (150 Words)" name="body" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Body (150 Words)" name="body" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey", height:"7rem"}}>  
                   </Input>
                 </p>
               </div>
@@ -120,19 +120,19 @@ const FeaturesSplit = ({
                   width={528}
                   height={396} /> */}
                   <p className="m-0">
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Parent's Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
                   <div className="row" style={{marginTop:"2%"}}>
                     <div className="column" style={{paddingRight:"1%"}}>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Parent's Age" name="age" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Age" name="age" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
                     </div>
                     <div className="column" style={{paddingLeft:"1%"}}>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Parent's Gender" name="gender" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Gender" name="gender" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
                     </div>
                   </div>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone" name="phone" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Phone" name="phone" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Relation" name="relation" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
@@ -140,9 +140,9 @@ const FeaturesSplit = ({
                   </Input>
                   <br/>
                   <br/>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Wants" name="wants" style={{marginTop:"3%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Wants (50 Words)" name="wants" style={{marginTop:"3%", borderRadius:"20px", borderColor:"grey", height:"5rem"}}>  
                   </Input>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Needs" name="needs" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Needs (150 Words)" name="needs" style={{marginTop:"3%", borderRadius:"20px", borderColor:"grey", height:"7rem"}}>  
                   </Input>
                 </p>
               </div>
