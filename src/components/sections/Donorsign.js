@@ -82,7 +82,7 @@ const FeaturesSplit = ({
                     </Input>
                     </div>
                     <div className="column" style={{paddingLeft:"1%"}}>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Gender" name="gender" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                    <Input id="newsletter" type="gender" hasIcon="right" placeholder="Your Gender" name="gender" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
                     </div>
                   </div>

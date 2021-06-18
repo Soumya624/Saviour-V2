@@ -74,6 +74,7 @@ const FeaturesSplit = ({
                   Lorem Ipsum
                 </h3> */}
                 <p className="m-0">
+                  <p className="m-0">Your Information</p>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
                   <div className="row" style={{marginTop:"2%"}}>
@@ -120,6 +121,7 @@ const FeaturesSplit = ({
                   width={528}
                   height={396} /> */}
                   <p className="m-0">
+                  <p className="m-0">Guardian's Information</p>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
                   <div className="row" style={{marginTop:"2%"}}>
@@ -140,7 +142,7 @@ const FeaturesSplit = ({
                   </Input>
                   <br/>
                   <br/>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Wants (50 Words)" name="wants" style={{marginTop:"3%", borderRadius:"20px", borderColor:"grey", height:"5rem"}}>  
+                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Wants (50 Words)" name="wants" style={{marginTop:"2%", borderRadius:"20px", borderColor:"grey", height:"5rem"}}>  
                   </Input>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Needs (150 Words)" name="needs" style={{marginTop:"3%", borderRadius:"20px", borderColor:"grey", height:"7rem"}}>  
                   </Input>
