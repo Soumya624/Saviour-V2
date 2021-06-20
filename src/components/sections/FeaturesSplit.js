@@ -83,7 +83,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/a1.jpg')}
+                  src={require('./../../assets/images/c13.jpg')}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -109,7 +109,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/a2.jpg')}
+                  src={require('./../../assets/images/c4.png')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -135,7 +135,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/a1.jpg')}
+                  src={require('./../../assets/images/c9.jpeg')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
