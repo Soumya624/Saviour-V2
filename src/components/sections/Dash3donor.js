@@ -83,11 +83,8 @@ const FeaturesSplit = ({
                                             loader={<div>Loading Chart</div>}
                                             data={[
                                                 ['Task', '100'],
-                                                ['Test_1', 19],
-                                                ['Test_2', 17],
-                                                ['Test_3', 22],
-                                                ['Test_4', 18],
-                                                ['Test_5', 24],
+                                                ['Received Marks', 83],
+                                                ['Deducted Marks', 17],
                                             ]}
                                             options={{
                                                 title: '',

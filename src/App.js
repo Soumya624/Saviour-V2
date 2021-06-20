@@ -17,6 +17,7 @@ import Dash3Donor from './views/DashboardtertiaryDonor';
 import Dash4Donor from './views/DashboardquaternaryDonor';
 import LoginStudent from './views/LoginStudent';
 import SignupStudent from './views/SignupStudent';
+import Dash1Student from './views/DashboardprimaryStudent';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -52,6 +53,7 @@ const App = () => {
           <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard1_Student" component={Dash1Student} layout={LayoutDefault} />
         </Switch>
       )} />
   );

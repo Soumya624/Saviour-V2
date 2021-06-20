@@ -79,7 +79,7 @@ const FeaturesSplit = ({
                   <Input id="newsletter" type="password" hasIcon="right" placeholder="Your Password" name="password" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input><br/>
                   <center>
-                  <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px"}}>Login</Link>
+                  <Link to="Dashboard1_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px"}}>Login</Link>
                   <br/><br/>Don't Have an Account? <a href="/Signup_Student">Signup</a>
                   </center>
                   </form>
