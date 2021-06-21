@@ -96,7 +96,7 @@ const Hero = ({
               </div>
               <div className="column">
                 <div>
-                <img src="haiti.png" alt="" style={{width:"70%"}}/>
+                <img src="childrenRun.png" alt="" style={{width:"90%"}}/>
                 </div>
               </div>
             </div>

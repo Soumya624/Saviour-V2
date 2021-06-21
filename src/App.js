@@ -16,6 +16,7 @@ import Dash2Donor from './views/DashboardsecondaryDonor';
 import Dash3Donor from './views/DashboardtertiaryDonor';
 import Dash4Donor from './views/DashboardquaternaryDonor';
 import NewsDonor from './views/News';
+import FeedDonor from './views/Feed';
 import LoginStudent from './views/LoginStudent';
 import SignupStudent from './views/SignupStudent';
 import Dash1Student from './views/DashboardprimaryStudent';
@@ -53,6 +54,7 @@ const App = () => {
           <AppRoute exact path="/Dashboard3_Donor" component={Dash3Donor} layout={LayoutDefault} />
           <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDefault} />
           <AppRoute exact path="/News_Donor" component={NewsDonor} layout={LayoutDefault} />
+          <AppRoute exact path="/Feed_Donor" component={FeedDonor} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Dashboard1_Student" component={Dash1Student} layout={LayoutDefault} />
