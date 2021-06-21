@@ -80,7 +80,7 @@ const FeaturesSplit = ({
     paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   };
   
-
+  alert("Please Use Student's Emails to Schedule a Meeing");
   return (
     <section
       {...props}
@@ -109,7 +109,7 @@ const FeaturesSplit = ({
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <center>
-                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
               </div>
               <div className={
@@ -137,7 +137,7 @@ const FeaturesSplit = ({
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <center>
-                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
               </div>
               <div className={
@@ -165,7 +165,7 @@ const FeaturesSplit = ({
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <center>
-                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
               </div>
               <div className={
@@ -190,7 +190,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
-                <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
                 </div>
                 <div>
@@ -200,7 +200,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
-                <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
                 </div>
                 <div>
@@ -210,7 +210,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
-                <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
                 </div>
                 <div>
@@ -220,7 +220,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
-                <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
                 </div>
                 <div>
@@ -230,7 +230,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
-                <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</Link>
+                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Contact Now</a>
                 </center>
                 </div>
             </Carousel>;

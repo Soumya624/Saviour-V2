@@ -203,14 +203,14 @@ const FeaturesTiles = ({
             </div><br/><br/>
             <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800" style={{alignItems:"center", margin:"5% 0%"}}>
             <a
-              data-video="https://www.youtube.com/embed/36Fg7HHNB9Y"
+              data-video="https://www.youtube.com/embed/BtDFLi2vDcY"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
             >
               <Image
                 className="has-shadow"
-                src={require('./../../assets/images/vp1.jpg')}
+                src={require('./../../assets/images/sup.png')}
                 alt="Hero"
                 width={550}
                 height={504}
@@ -221,7 +221,7 @@ const FeaturesTiles = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://www.youtube.com/embed/36Fg7HHNB9Y"
+            video="https://www.youtube.com/embed/BtDFLi2vDcY"
             videoTag="iframe" />
           </div>
         </div>

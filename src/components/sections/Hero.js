@@ -71,7 +71,7 @@ const Hero = ({
                       Be a <span className="text-color-primary" style={{color:"#3d946e"}}>Hero!</span>
                     </h1>
                       <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
-                        Virtually Adopt a Child For His Education
+                        Virtually Adopt a Child For His/Her Education
                       </p>
                     </div>
                   <div className="reveal-from-bottom" data-reveal-delay="600">
