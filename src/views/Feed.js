@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <>
     <Feed className="illustration-section-01"/>
+    <Cta split />
     </>
   );
 }

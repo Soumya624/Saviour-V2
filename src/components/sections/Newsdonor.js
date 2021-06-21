@@ -176,28 +176,36 @@ const FeaturesSplit = ({
             <br/>
             <Carousel responsive={responsive} style={{alignItems:"center"}}>
                 <div>
+                <center>
                 <Image
                   src={require('./../../assets/images/c4.png')}
                   alt="Features split 03"
                 />
+                </center>
                 </div>
                 <div>
+                <center>
                 <Image
                   src={require('./../../assets/images/c1.jpg')}
                   alt="Features split 03"
                 />
+                </center>
                 </div>
                 <div>
+                <center>
                 <Image
                   src={require('./../../assets/images/c4.png')}
                   alt="Features split 03"
                 />
+                </center>
                 </div>
                 <div>
+                <center>
                 <Image
                   src={require('./../../assets/images/c6.jpg')}
                   alt="Features split 03"
                 />
+                </center>
                 </div>
             </Carousel>;
             
