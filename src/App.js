@@ -6,6 +6,8 @@ import ReactGA from 'react-ga';
 
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
+import LayoutDonor from './layouts/LayoutDonor';
+import LayoutStudent from './layouts/LayoutStudent';
 
 // Views 
 import Home from './views/Home';
@@ -49,15 +51,15 @@ const App = () => {
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Donor" component={LoginDonor} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Donor" component={SignupDonor} layout={LayoutDefault} />
-          <AppRoute exact path="/Dashboard1_Donor" component={Dash1Donor} layout={LayoutDefault} />
-          <AppRoute exact path="/Dashboard2_Donor" component={Dash2Donor} layout={LayoutDefault} />
-          <AppRoute exact path="/Dashboard3_Donor" component={Dash3Donor} layout={LayoutDefault} />
-          <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDefault} />
-          <AppRoute exact path="/News_Donor" component={NewsDonor} layout={LayoutDefault} />
-          <AppRoute exact path="/Feed_Donor" component={FeedDonor} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard1_Donor" component={Dash1Donor} layout={LayoutDonor} />
+          <AppRoute exact path="/Dashboard2_Donor" component={Dash2Donor} layout={LayoutDonor} />
+          <AppRoute exact path="/Dashboard3_Donor" component={Dash3Donor} layout={LayoutDonor} />
+          <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDonor} />
+          <AppRoute exact path="/News_Donor" component={NewsDonor} layout={LayoutDonor} />
+          <AppRoute exact path="/Feed_Donor" component={FeedDonor} layout={LayoutDonor} />
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />
-          <AppRoute exact path="/Dashboard1_Student" component={Dash1Student} layout={LayoutDefault} />
+          <AppRoute exact path="/Dashboard1_Student" component={Dash1Student} layout={LayoutStudent} />
         </Switch>
       )} />
   );

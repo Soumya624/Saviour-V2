@@ -84,7 +84,7 @@ const FeaturesSplit = ({
                                     </p>
                                     <br/>
                                     <br/>
-                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Button</Link>
+                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
@@ -103,7 +103,7 @@ const FeaturesSplit = ({
                                     </p>
                                     <br/>
                                     <br/>
-                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Button</Link>
+                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>

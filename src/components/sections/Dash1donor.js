@@ -81,7 +81,7 @@ const Testimonial = ({
                         <a href="#" style={{textDecoration:"none", color:"black", marginRight:"3%"}}>eDOPTED</a>  2
                       </div>
                       <div className="column">
-                      <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Button</Link>
+                      <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                       </div>
                   </div>
                   <br/>

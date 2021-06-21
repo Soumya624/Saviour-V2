@@ -112,21 +112,21 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="/" onClick={closeMenu}>Home</Link>
+                      <Link to="/Dashboard1_Student" onClick={closeMenu}>Dashboard</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/Feed_Donor" onClick={closeMenu}>Feeds</Link>
                     </li>
                     <li>
-                      <Link to="/" onClick={closeMenu}>About Us</Link>
-                    </li>
-                    <li>
-                      <Link to="/" onClick={closeMenu}>How we Work</Link>
-                    </li>
+                      <Link to="/News_Donor" onClick={closeMenu}>News</Link>
+                    </li> */}
                   </ul>
                   {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/Signup_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>Donate Now</Link>
+                        <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>Logout</Link>
                       </li>
                     </ul>}
                 </div>
