@@ -74,9 +74,9 @@ const FeaturesSplit = ({
                 </h3> */}
                 <p className="m-0">
                   <form>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                  </Input>
-                  {/* <div className="row" style={{marginTop:"2%"}}>
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name" name="name" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+                    {/* <div className="row" style={{marginTop:"2%"}}>
                     <div className="column" style={{paddingRight:"1%"}}>
                     <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Age" name="age" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
@@ -86,25 +86,39 @@ const FeaturesSplit = ({
                     </Input>
                     </div>
                   </div> */}
-                  <div className="row" style={{marginTop:"2%"}}>
-                    <div className="column" style={{paddingRight:"1%"}}>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your City" name="city" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                    </Input>
+                    <div className="row" style={{ marginTop: "2%" }}>
+                      <div className="column" style={{ paddingRight: "1%" }}>
+                        <Input id="newsletter" type="name" hasIcon="right" placeholder="Your City" name="city" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                        </Input>
+                      </div>
+                      <div className="column" style={{ paddingLeft: "1%" }}>
+                        <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Pincode" name="pin" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                        </Input>
+                      </div>
                     </div>
-                    <div className="column" style={{paddingLeft:"1%"}}>
-                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Pincode" name="pin" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                    <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone" name="phone" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
-                    </div>
-                  </div>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone" name="phone" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                  </Input>
-                  {/* <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Company" name="company" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                    {/* <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Company" name="company" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input> */}
-                  <br/>
-                  <center>
-                  <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px"}}>Signup</Link>
-                  <br/><br/>Already Have an Account? <a href="/Login_Donor">Login</a>
-                  </center>
+                    <center>
+                      <br />
+                      <div className="row">
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Google</Link>
+                        </div>
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Instagram</Link>
+                        </div>
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Facebook</Link>
+                        </div>
+                      </div>
+                    </center>
+                    <br />
+                    <center>
+                      <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Signup</Link>
+                      <br /><br />Already Have an Account? <a href="/Login_Donor">Login</a>
+                    </center>
                   </form>
                 </p>
               </div>

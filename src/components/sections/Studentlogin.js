@@ -74,14 +74,29 @@ const FeaturesSplit = ({
                 </h3> */}
                 <p className="m-0">
                   <form>
-                  <Input id="newsletter" type="email" hasIcon="right" placeholder="Your Username" name="username" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                  </Input>
-                  <Input id="newsletter" type="password" hasIcon="right" placeholder="Your Password" name="password" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                  </Input><br/>
-                  <center>
-                  <Link to="Dashboard1_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px"}}>Login</Link>
-                  <br/><br/>Don't Have an Account? <a href="/Signup_Student">Signup</a>
-                  </center>
+                    <Input id="newsletter" type="email" hasIcon="right" placeholder="Your Username" name="username" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+                    <Input id="newsletter" type="password" hasIcon="right" placeholder="Your Password" name="password" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    </Input>
+                    {/* <center>
+                      <br />
+                      <div className="row">
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Google</Link>
+                        </div>
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Instagram</Link>
+                        </div>
+                        <div className="columnl">
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Facebook</Link>
+                        </div>
+                      </div>
+                    </center> */}
+                    <br />
+                    <center>
+                      <Link to="Dashboard1_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</Link>
+                      <br /><br />Don't Have an Account? <a href="/Signup_Student">Signup</a>
+                    </center>
                   </form>
                 </p>
               </div>

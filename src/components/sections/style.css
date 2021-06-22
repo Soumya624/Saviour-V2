@@ -44,6 +44,19 @@
   border-radius: 20vh;
 }
 
+.columnl {
+  float: left;
+  width: 33%;
+}
+.columnb {
+  float: left;
+  width: 33%;
+}
+.columnr {
+  float: left;
+  width: 33%;
+}
+
 @media screen and (max-width: 768px) {
   .column {
     float: left;
