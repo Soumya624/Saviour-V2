@@ -4,6 +4,27 @@ import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 const propTypes = {
   ...SectionTilesProps.types
 }
@@ -66,8 +87,62 @@ const FeaturesTiles = ({
       className={outerClasses}
     >
       <div className="container">
+      
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content"/>
+          <Carousel responsive={responsive} style={{alignItems:"center"}}>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/p3.png')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/p3.png')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/p3.png')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/p3.png')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/p3.png')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+            </Carousel>;
+            <br/><br/>
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">

@@ -76,7 +76,7 @@ const FeaturesSplit = ({
                   <form>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Name" name="name" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
-                  <div className="row" style={{marginTop:"2%"}}>
+                  {/* <div className="row" style={{marginTop:"2%"}}>
                     <div className="column" style={{paddingRight:"1%"}}>
                     <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Age" name="age" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
@@ -85,7 +85,7 @@ const FeaturesSplit = ({
                     <Input id="newsletter" type="gender" hasIcon="right" placeholder="Your Gender" name="gender" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                     </Input>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row" style={{marginTop:"2%"}}>
                     <div className="column" style={{paddingRight:"1%"}}>
                     <Input id="newsletter" type="name" hasIcon="right" placeholder="Your City" name="city" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
@@ -98,8 +98,8 @@ const FeaturesSplit = ({
                   </div>
                   <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Phone" name="phone" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
                   </Input>
-                  <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Company" name="company" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
-                  </Input>
+                  {/* <Input id="newsletter" type="name" hasIcon="right" placeholder="Your Company" name="company" style={{marginTop:"4%", borderRadius:"20px", borderColor:"grey"}}>  
+                  </Input> */}
                   <br/>
                   <center>
                   <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e", borderRadius:"20px"}}>Signup</Link>

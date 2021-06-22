@@ -5,7 +5,10 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
-import './style.css'
+import { useTranslation } from "react-i18next";
+import './style.css';
+import './english.json';
+import './hindi.json'
 const propTypes = {
   ...SectionProps.types
 }
@@ -45,6 +48,8 @@ const Hero = ({
     invertColor && 'invert-color',
     className
   );
+
+  const { t, i18n } = useTranslation();
 
   const innerClasses = classNames(
     'hero-inner section-inner',

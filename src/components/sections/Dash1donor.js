@@ -92,7 +92,7 @@ const Testimonial = ({
                       2. xxxxxxxxxxxxxxxxxx
                   </div>
                   <br/>
-                  <a href="#" style={{color:"#3d946e", fontSize:"14px"}}>Adopt More</a>
+                  <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px"}}>Adopt More</a>
                 </p>
               </div>
               <div className='split-item-image center-content-mobile reveal-from-bottom' data-reveal-container=".split-item" style={{paddingLeft:"2%"}}>

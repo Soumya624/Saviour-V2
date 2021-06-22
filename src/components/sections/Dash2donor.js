@@ -72,7 +72,7 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <p className="m-0" style={{alignItems:"center"}}>
-                  <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
+                  <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
                   <br/>
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <div className="row"> 
