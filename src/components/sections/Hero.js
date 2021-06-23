@@ -5,10 +5,40 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
-import { useTranslation } from "react-i18next";
 import './style.css';
-import './english.json';
-import './hindi.json'
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+var x= prompt('Choose Language (English/Hindi)');
+console.log(x);
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    // the translations
+    // (tip move them in a JSON file and import them,
+    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+    resources: {
+      English: {
+        translation: {
+          "key": "Hero",
+          "key2": "Be a"
+        }
+      },
+      Hindi: {
+        translation: {
+          "key": "नायक",
+          "key2": "बनें"
+        }
+      }
+    },
+    lng: x,
+    fallbackLng: "en",
+
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+
 const propTypes = {
   ...SectionProps.types
 }
@@ -49,7 +79,7 @@ const Hero = ({
     className
   );
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const innerClasses = classNames(
     'hero-inner section-inner',
@@ -73,7 +103,7 @@ const Hero = ({
                 <div className="container-xs">
                     <div style={{textAlign:"left", marginTop:"2%", marginLeft:"1%"}}>
                     <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
-                      Be a <span className="text-color-primary" style={{color:"#3d946e"}}>Hero!</span>
+                      {t('key2')} <span className="text-color-primary" style={{color:"#3d946e"}}>{t('key')}!</span>
                     </h1>
                       <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
                         Virtually Adopt a Child For His/Her Education
