@@ -8,7 +8,7 @@ import Modal from '../elements/Modal';
 import './style.css';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
-var x= prompt('Choose Language (English/Hindi)');
+export const x= prompt('Choose Language (English/Hindi)');
 console.log(x);
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -19,19 +19,15 @@ i18n
     resources: {
       English: {
         translation: {
-          "key": "Hero",
-          "key2": "Be a"
         }
       },
       Hindi: {
         translation: {
-          "key": "नायक",
-          "key2": "बनें"
         }
       }
     },
     lng: x,
-    fallbackLng: "en",
+    fallbackLng: 'English',
 
     interpolation: {
       escapeValue: false
@@ -103,27 +99,27 @@ const Hero = ({
                 <div className="container-xs">
                     <div style={{textAlign:"left", marginTop:"2%", marginLeft:"1%"}}>
                     <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
-                      {t('key2')} <span className="text-color-primary" style={{color:"#3d946e"}}>{t('key')}!</span>
+                      {t('key1')} <span className="text-color-primary" style={{color:"#3d946e"}}>{t('key')}!</span>
                     </h1>
                       <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
-                        Virtually Adopt a Child For His/Her Education
+                        {t('key2')}
                       </p>
                     </div>
                   <div className="reveal-from-bottom" data-reveal-delay="600">
                     <ButtonGroup>
                       <Button tag="a" color="primary" wideMobile href="/Signup_Donor" style={{backgroundColor:"#3d946e"}}>
-                        Adopt Now
+                        {t('key7')}
                         </Button>
                       <Button tag="a" color="dark" wideMobile href="/Signup_Student" style={{backgroundColor:"#3d946e"}}>
-                        Student
+                        {t('key8')}
                       </Button>
                     </ButtonGroup>
                     <div style={{textAlign:"right", marginTop:"2%"}}>
                       <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
-                        Student?
+                        {t('key8')}?
                       </h1>
                       <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{marginTop:"0px", paddingTop:"0px"}}>
-                        Join Here
+                        {t('key9')}
                       </p>
                     </div>
                   </div>
