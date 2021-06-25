@@ -1,6 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from '../../sections/Hero';
+console.log(`${x}`)
 
 const FooterNav = ({
   className,
@@ -12,6 +16,8 @@ const FooterNav = ({
     className
   );
 
+  const { t } = useTranslation();
+
   return (
     <nav
       {...props}
@@ -19,13 +25,13 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
-          <Link to="#0">Home</Link>
+          <Link to="#0">{t('key3')}</Link>
         </li>
         <li>
-          <Link to="/Feed_Donor">Feeds</Link>
+          <Link to="/Feed_Donor">{t('key4')}</Link>
         </li>
         <li>
-          <Link to="/News_Donor">News</Link>
+          <Link to="/News_Donor">{t('key5')}</Link>
         </li>
       </ul>
     </nav>

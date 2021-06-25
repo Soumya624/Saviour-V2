@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import Logo from './partials/Logo';
 import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from '../sections/Hero';
+
+console.log(`${x}`);
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -28,6 +33,8 @@ const Footer = ({
     className
   );
 
+  const { t } = useTranslation();
+
   return (
     <footer
       {...props}
@@ -45,7 +52,7 @@ const Footer = ({
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
-            <div className="footer-copyright">Made by eDOPT. All right reserved</div>
+            <div className="footer-copyright">{t('key33')}</div>
           </div>
         </div>
       </div>

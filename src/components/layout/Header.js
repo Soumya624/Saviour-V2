@@ -38,7 +38,18 @@ i18n
           "key19":"We trust your motive that makes us help you impact lives.",
           "key20":"Why us",
           "key21":"We let you know how your donation money is used in the welfare of children and helps you build a personal connection.",
-          "key22":"Want To Be A Hero?"
+          "key22":"Want To Be A Hero?",
+          "key23":"Signup As a Donor",
+          "key24":"Login As a Donor",
+          "key25":"Signup As a Student",
+          "key26":"Login As a Student",
+          "key27":"Signup",
+          "key28":"Login",
+          "key29":"Already Have an Account?",
+          "key30":"Don't Have an Account?",
+          "key31":"Dashboard",
+          "key32":"Logout",
+          "key33":"Made by eDOPT. All right reserved",
         }
       },
       Hindi: {
@@ -65,7 +76,18 @@ i18n
           "key19":"हमें आपके मकसद पर भरोसा है जो हमें जीवन को प्रभावित करने में आपकी मदद करता है",
           "key20":"हम क्यों",
           "key21":"हम आपको बताते हैं कि आपके दान के पैसे का उपयोग बच्चों के कल्याण में कैसे किया जाता है और आपको व्यक्तिगत संबंध बनाने में मदद करता है",
-          "key22":"नायक बनना चाहते हैं?"
+          "key22":"नायक बनना चाहते हैं?",
+          "key23":"साइनअप डोनर",
+          "key24":"लॉगिन डोनर",
+          "key25":"साइनअप छात्र",
+          "key26":"लॉगिन छात्र",
+          "key27":"साइनअप",
+          "key28":"लॉगिन",
+          "key29":"पहले से ही एक खाता है?",
+          "key30":"खाता नहीं है?",
+          "key31":"डैशबोर्ड",
+          "key32":"लॉग आउट",
+          "key33":"eDOPT द्वारा किया गया। सर्वाधिकार सुरक्षित"
         }
       }
     },

@@ -57,9 +57,9 @@ const FeaturesSplit = ({
   );
 
   const { t } = useTranslation();
-  
+
   const sectionHeader = {
-    title: 'Signup As a Donor',
+    title: '',
     paragraph: '-'
   };
 
@@ -70,7 +70,9 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key23')}</h2>
+          </SectionHeader>
           <div className={splitClasses}>
 
             <div className="split-item">
@@ -123,7 +125,7 @@ const FeaturesSplit = ({
                     <br />
                     <center>
                       <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Signup</Link>
-                      <br /><br />Already Have an Account? <a href="/Login_Donor">Login</a>
+                      <br /><br />{t('key29')} <a href="/Login_Donor">{t('key28')}</a>
                     </center>
                   </form>
                 </p>
