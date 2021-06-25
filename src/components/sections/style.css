@@ -56,7 +56,10 @@
   float: left;
   width: 33%;
 }
-
+.column8 {
+  float: left;
+  width: 50%;
+}
 @media screen and (max-width: 768px) {
   .column {
     float: left;
@@ -81,5 +84,9 @@
     padding: 3%;
     margin: 1% 0% 4% 0%;
     border: none;
+  }
+  .column8 {
+    float: left;
+    width: 100%;
   }
 }

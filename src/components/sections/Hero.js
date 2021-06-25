@@ -5,6 +5,7 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
+import SectionHeader from './partials/SectionHeader';
 import './style.css';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
@@ -51,6 +52,10 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
+  invertMobile,
+  invertDesktop,
+  alignTop,
+  imageFill,
   ...props
 }) => {
 
@@ -83,20 +88,31 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
+  const splitClasses = classNames(
+    'split-wrap',
+    invertMobile && 'invert-mobile',
+    invertDesktop && 'invert-desktop',
+    alignTop && 'align-top'
+  );
+
+  const sectionHeader = {
+    title: '',
+    paragraph: ''
+  };
+
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      
+      <div className="container">
         <div className={innerClasses}>
-          <div className="hero-content" >
-            <div className="row">
-              <div className="column">
-                {/* <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
-                  Be a <span className="text-color-primary" style={{color:"#8DD9CC"}}>Hero!</span>
-                </h1> */}
-                <div className="container-xs">
+          <SectionHeader data={sectionHeader} className="center-content" />
+          <div className={splitClasses}>
+
+            <div className="split-item">
+              <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
+              <div className="container-xs">
                     <div style={{textAlign:"left", marginTop:"2%", marginLeft:"1%"}}>
                     <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{color:"black", marginBottom:"0"}}>
                       {t('key1')} <span className="text-color-primary" style={{color:"#3d946e"}}>{t('key')}!</span>
@@ -125,15 +141,18 @@ const Hero = ({
                   </div>
                 </div>
               </div>
-              <div className="column">
-                <div>
+              <div className={
+                classNames(
+                  'split-item-image center-content-mobile reveal-from-bottom',
+                  imageFill && 'split-item-image-fill'
+                )}
+                data-reveal-container=".split-item">
                 <img src="childrenRun.png" alt="" style={{width:"90%"}}/>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
   );
 }

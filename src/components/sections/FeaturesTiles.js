@@ -89,8 +89,7 @@ const FeaturesTiles = ({
       <div className="container">
       
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content"/>
-          <Carousel responsive={responsive} style={{alignItems:"center"}}>
+        <Carousel responsive={responsive} style={{alignItems:"center", marginTop:"5%"}}>
                 <div>
                 <center>
                 <Image
@@ -143,6 +142,7 @@ const FeaturesTiles = ({
                 </div>
             </Carousel>;
             <br/><br/>
+          <SectionHeader data={sectionHeader} className="center-content"/>
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">
@@ -160,9 +160,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div>
@@ -182,9 +182,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div>
@@ -204,9 +204,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div>
@@ -226,9 +226,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div>
@@ -248,9 +248,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div>
@@ -270,9 +270,9 @@ const FeaturesTiles = ({
                   <h4 className="mt-0 mb-8">
                     Robust Workflow
                     </h4>
-                  <p className="m-0 text-sm">
+                  {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </p> */}
                 </div>
               </div>
             </div><br/><br/>
