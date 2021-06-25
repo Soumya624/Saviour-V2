@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
 import { Link } from 'react-router-dom';
+import Modal from '../elements/Modal';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import Calendar from 'react-calendar';
@@ -55,11 +56,23 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
+  const [videoModalActive, setVideomodalactive] = useState(false);
+
+  const openModal = (e) => {
+    e.preventDefault();
+    setVideomodalactive(true);
+  }
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setVideomodalactive(false);
+  }   
+
   const sectionHeader = {
     title: '',
     paragraph: ''
   };
-  alert("Login to Schedule a Meeting!")
+  // alert("Login to Schedule a Meeting!")
   return (
     <section
       {...props}
@@ -129,6 +142,9 @@ const FeaturesSplit = ({
                             <Calendar/>
                             <br/><br/>
                             <TimePicker />
+                            <br/><br/>
+                            <a href="#" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Meet Now</a>
+                            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Go Ahead</a>
                         </div>
                 </center>
                 </p>
