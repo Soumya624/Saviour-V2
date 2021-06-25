@@ -25,7 +25,20 @@ i18n
           "key6":"Join",
           "key7":"Adopt Now",
           "key8":"Student",
-          "key9":"Join Here"
+          "key9":"Join Here",
+          "key10":"Select",
+          "key11":"Interact",
+          "key12":"Plan",
+          "key13":"Pay",
+          "key14":"Get monthly reports",
+          "key15":"Build personal connection",
+          "key16":"How we work",
+          "key17":"We provide a one to one give and take method so you can know everything about your impact.",
+          "key18":"Impacted Lives",
+          "key19":"We trust your motive that makes us help you impact lives.",
+          "key20":"Why us",
+          "key21":"We let you know how your donation money is used in the welfare of children and helps you build a personal connection.",
+          "key22":"Want To Be A Hero?"
         }
       },
       Hindi: {
@@ -39,7 +52,20 @@ i18n
           "key6": "रजिस्टर करें",
           "key7":"अब अपनाये",
           "key8":"छात्र",
-          "key9":"यहाँ शामिल होएं"
+          "key9":"यहाँ शामिल होएं",
+          "key10":"चुनते हैं",
+          "key11":"सहभागिता",
+          "key12":"योजना",
+          "key13":"वेतन",
+          "key14":"मासिक रिपोर्ट प्राप्त करें",
+          "key15":"व्यक्तिगत संबंध बनाएं",
+          "key16":"हम कैसे काम करते हैं",
+          "key17":"हम एक से एक देने और लेने की विधि प्रदान करते हैं ताकि आप अपने प्रभाव के बारे में सब कुछ जान सकें",
+          "key18":"प्रभावित जीवन",
+          "key19":"हमें आपके मकसद पर भरोसा है जो हमें जीवन को प्रभावित करने में आपकी मदद करता है",
+          "key20":"हम क्यों",
+          "key21":"हम आपको बताते हैं कि आपके दान के पैसे का उपयोग बच्चों के कल्याण में कैसे किया जाता है और आपको व्यक्तिगत संबंध बनाने में मदद करता है",
+          "key22":"नायक बनना चाहते हैं?"
         }
       }
     },

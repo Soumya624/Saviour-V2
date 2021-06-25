@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionProps.types,
@@ -42,6 +46,7 @@ const Cta = ({
     split && 'cta-split'
   );  
  
+  const { t } = useTranslation();
 
   const [_email,setEM] = React.useState('');
 
@@ -57,7 +62,7 @@ const Cta = ({
         >
           <div className="cta-slogan">
             <h3 className="m-0">
-              Want To Be A Hero?
+              {t('key22')}
               </h3>
           </div>
           <div className="cta-action">

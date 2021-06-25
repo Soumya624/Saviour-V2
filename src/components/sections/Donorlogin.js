@@ -5,7 +5,10 @@ import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
 import { Link } from 'react-router-dom';
-
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -52,9 +55,11 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
+  const { t } = useTranslation();
+  
   const sectionHeader = {
     title: 'Signin As a Donor',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    paragraph: '-'
   };
 
   return (

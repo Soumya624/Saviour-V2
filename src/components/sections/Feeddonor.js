@@ -8,6 +8,11 @@ import { Link } from 'react-router-dom';
 import Carousel from "react-multi-carousel";
 import Input from '../elements/Input';
 import "react-multi-carousel/lib/styles.css";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -75,9 +80,11 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
+  const { t } = useTranslation();
+
   const sectionHeader = {
     title: '',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    paragraph: '-'
   };
   
   // alert("Please Use Student's Emails to Schedule a Meeing");
@@ -94,6 +101,7 @@ const FeaturesSplit = ({
                 <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
               </svg>
             </Input>
+            <p>{t('key17')}</p>
           </SectionHeader>
           <div className={splitClasses}>
 

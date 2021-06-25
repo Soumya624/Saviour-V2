@@ -2,6 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -43,9 +47,11 @@ const Testimonial = ({
     pushLeft && 'push-left'
   );
 
+  const { t } = useTranslation();
+
   const sectionHeader = {
-    title: 'Why Us',
-    paragraph: 'Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.'
+    title: "",
+    paragraph: "-"
   };
 
   return (
@@ -55,7 +61,10 @@ const Testimonial = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key20')}</h2>
+            <p>{t('key21')}</p>
+          </SectionHeader>
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-right" data-reveal-delay="200" style={{backgroundColor:"#ffffff", borderRadius:"25px", margin:"1%"}}>
