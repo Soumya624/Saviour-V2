@@ -86,6 +86,9 @@ const FeaturesSplit = ({
                                     </p>
                                     <br/>
                                     <br/>
+                                    <center>
+                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Call</Link>
+                                    </center>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
@@ -94,7 +97,7 @@ const FeaturesSplit = ({
                                 </div>
                         </div>
                     </div>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
+                    {/* <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
@@ -115,7 +118,7 @@ const FeaturesSplit = ({
                                     </p>
                                 </div>
                         </div>
-                    </div>
+                    </div> */}
                 </p>
               </div>
               <div className='split-item-image center-content-mobile reveal-from-bottom' data-reveal-container=".split-item" style={{paddingLeft:"2%"}}>
