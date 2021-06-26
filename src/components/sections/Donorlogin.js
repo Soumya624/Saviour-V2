@@ -5,7 +5,10 @@ import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
 import { Link } from 'react-router-dom';
-
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -52,9 +55,11 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
+  const { t } = useTranslation();
+
   const sectionHeader = {
-    title: 'Signin As a Donor',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: '',
+    paragraph: '-'
   };
 
   return (
@@ -64,7 +69,9 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key24')}</h2>
+          </SectionHeader>
           <div className={splitClasses}>
 
             <div className="split-item">
@@ -95,7 +102,7 @@ const FeaturesSplit = ({
                     <br />
                     <center>
                       <Link to="/Dashboard1_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</Link>
-                      <br /><br />Don't Have an Account? <a href="/Signup_Donor">Signup</a>
+                      <br /><br />{t('key30')} <a href="/Signup_Donor">{t('key27')}</a>
                     </center>
                   </form>
                 </p>

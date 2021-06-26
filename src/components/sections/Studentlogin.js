@@ -5,7 +5,10 @@ import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
 import { Link } from 'react-router-dom';
-
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -52,9 +55,11 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
+  const { t } = useTranslation();
+
   const sectionHeader = {
-    title: 'Signin As a Student',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: '',
+    paragraph: '-'
   };
 
   const [username, setUsername] = useState('')
@@ -73,7 +78,9 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key25')}</h2>
+          </SectionHeader>
           <div className={splitClasses}>
 
             <div className="split-item">
@@ -103,8 +110,13 @@ const FeaturesSplit = ({
                     </center> */}
                     <br />
                     <center>
+<<<<<<< HEAD
                       <button className="button button-primary button-wide-mobile button-sm" type="submit" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</button>
                       <br /><br />Don't Have an Account? <a href="/Signup_Student">Signup</a>
+=======
+                      <Link to="Dashboard1_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</Link>
+                      <br /><br />{t('key30')} <a href="/Signup_Student">{t('key27')}</a>
+>>>>>>> b339ca3574be725c52af38b89932a40dddc15699
                     </center>
                   </form>
                 </p>

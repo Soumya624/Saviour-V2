@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from '../sections/Hero';
+console.log(`${x}`);
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -68,6 +72,8 @@ const Header = ({
     closeMenu();
   }  
 
+  const { t } = useTranslation();
+
   const classes = classNames(
     'site-header',
     bottomOuterDivider && 'has-bottom-divider',
@@ -112,13 +118,13 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="/Dashboard1_Donor" onClick={closeMenu}>Dashboard</Link>
+                      <Link to="/Dashboard1_Donor" onClick={closeMenu}>{t('key31')}</Link>
                     </li>
                     <li>
-                      <Link to="/Feed_Donor" onClick={closeMenu}>Feeds</Link>
+                      <Link to="/Feed_Donor" onClick={closeMenu}>{t('key4')}</Link>
                     </li>
                     <li>
-                      <Link to="/News_Donor" onClick={closeMenu}>News</Link>
+                      <Link to="/News_Donor" onClick={closeMenu}>{t('key5')}</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -126,7 +132,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/Login_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>Logout</Link>
+                        <Link to="/Login_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>{t('key32')}</Link>
                       </li>
                     </ul>}
                 </div>

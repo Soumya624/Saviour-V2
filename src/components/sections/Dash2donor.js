@@ -80,7 +80,7 @@ const FeaturesSplit = ({
                                     <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate
+                                        Pankaj Mishra
                                     </p>
                                     <br/>
                                     <br/>
@@ -88,7 +88,13 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                        
+                                            Age : 17<br/>
+                                            Gender : Male<br/>
+                                            City : Faridabad<br/>
+                                            Phone No : 8745372736<br/>
+                                            Class : 10th<br/>
+                                        
                                     </p>
                                 </div>
                         </div>
@@ -99,7 +105,7 @@ const FeaturesSplit = ({
                                     <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate
+                                        Varsha Ganguly
                                     </p>
                                     <br/>
                                     <br/>
@@ -107,7 +113,13 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                    
+                                        Age : 19<br/>
+                                        Gender : Female<br/>
+                                        City : Bangalore<br/>
+                                        Phone No : 9898975352<br/>
+                                        Class : 11th<br/>
+                                    
                                     </p>
                                 </div>
                         </div>

@@ -6,6 +6,11 @@ import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -75,10 +80,12 @@ const FeaturesTiles = ({
     'tiles-wrap center-content',
     pushLeft && 'push-left'
   );
+  
+  const { t } = useTranslation();
 
   const sectionHeader = {
-    title: 'How We Work',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: "",
+    paragraph: "-"
   };
 
   return (
@@ -93,7 +100,7 @@ const FeaturesTiles = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -101,6 +108,26 @@ const FeaturesTiles = ({
                 </center>
                 </div>
                 <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i2.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i3.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                {/* <div>
                 <center>
                 <Image
                   src={require('./../../assets/images/p3.png')}
@@ -119,46 +146,28 @@ const FeaturesTiles = ({
                 />
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
-            </Carousel>;
+                </div> */}
+            </Carousel>
             <br/><br/>
-          <SectionHeader data={sectionHeader} className="center-content"/>
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key16')}</h2>
+            <p>{t('key17')}</p>
+          </SectionHeader>
           <div className={tilesClasses}>
-
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      src={require('./../../assets/images/x1.jpg')}
                       alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key10')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
@@ -172,15 +181,15 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
+                      src={require('./../../assets/images/x2.jpg')}
                       alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key11')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
@@ -192,17 +201,17 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
+                  <div className="features-tiles-item-image mb-16" style={{backgroundColor:"white"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
+                      src={require('./../../assets/images/x7.png')}
                       alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                      width={135}
+                      height={135} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key12')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
@@ -216,15 +225,15 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                      src={require('./../../assets/images/x4.jpg')}
                       alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key13')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
@@ -238,15 +247,15 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
+                      src={require('./../../assets/images/x5.jpg')}
                       alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key14')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
@@ -260,15 +269,15 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
+                      src={require('./../../assets/images/x6.jpg')}
                       alt="Features tile icon 06"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  {t('key15')}
                     </h4>
                   {/* <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.

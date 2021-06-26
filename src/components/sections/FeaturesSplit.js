@@ -3,6 +3,10 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { x } from './Hero';
+console.log(`${x}`);
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -48,10 +52,12 @@ const FeaturesSplit = ({
     invertDesktop && 'invert-desktop',
     alignTop && 'align-top'
   );
+  
+  const { t } = useTranslation();
 
   const sectionHeader = {
-    title: 'Impacted Lives',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: "",
+    paragraph: "-"
   };
 
   return (
@@ -61,7 +67,10 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h2>{t('key18')}</h2>
+            <p>{t('key19')}</p>
+          </SectionHeader>
           <div className={splitClasses}>
 
             <div className="split-item">
