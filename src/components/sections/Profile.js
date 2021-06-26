@@ -72,7 +72,7 @@ const FeaturesSplit = ({
     title: '',
     paragraph: ''
   };
-  // alert("Login to Schedule a Meeting!")
+  alert("Login to Schedule a Meeting!")
   return (
     <section
       {...props}
