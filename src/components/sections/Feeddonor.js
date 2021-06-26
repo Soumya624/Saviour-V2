@@ -131,7 +131,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 01"
                   style={{width:"60%", borderRadius:"50%"}} />
               </div>
@@ -146,7 +146,7 @@ const FeaturesSplit = ({
                   Varsha Ganguly
                 </h4>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Age : 19
+                  Age : 11
                 </p>
                 <p className="m-0" style={{fontSize:"14px"}}>
                   Bangalore
@@ -162,7 +162,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i3.jpg')}
                   alt="Features split 01"
                   style={{width:"60%", borderRadius:"50%"}} />
               </div>
@@ -193,7 +193,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i2.jpg')}
                   alt="Features split 01"
                   style={{width:"60%", borderRadius:"50%"}} />
               </div>
@@ -204,7 +204,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -214,7 +214,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i3.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -224,7 +224,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i2.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -234,7 +234,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -244,7 +244,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i3.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
