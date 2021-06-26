@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -57,6 +57,15 @@ const FeaturesSplit = ({
     paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   };
 
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const loginFormSubmitHandler = event => {
+      console.log(username)
+      console.log(password)
+  }
+
+
   return (
     <section
       {...props}
@@ -73,10 +82,10 @@ const FeaturesSplit = ({
                   Lorem Ipsum
                 </h3> */}
                 <p className="m-0">
-                  <form>
-                    <Input id="newsletter" type="email" hasIcon="right" placeholder="Your Username" name="username" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                  <form onSubmit={loginFormSubmitHandler}>
+                    <Input id="newsletter" value={username} onChange={(e)=>{setUsername(e.target.value)}} type="email" hasIcon="right" placeholder="Your Username" name="username" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
-                    <Input id="newsletter" type="password" hasIcon="right" placeholder="Your Password" name="password" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    <Input id="newsletter" value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" hasIcon="right" placeholder="Your Password" name="password" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
                     {/* <center>
                       <br />
@@ -94,7 +103,7 @@ const FeaturesSplit = ({
                     </center> */}
                     <br />
                     <center>
-                      <Link to="Dashboard1_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</Link>
+                      <button className="button button-primary button-wide-mobile button-sm" type="submit" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</button>
                       <br /><br />Don't Have an Account? <a href="/Signup_Student">Signup</a>
                     </center>
                   </form>

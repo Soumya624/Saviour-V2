@@ -8,11 +8,8 @@ import Cta from '../components/sections/Cta';
 import News from '../components/sections/Newsdonor';
 
 const Home = () => {
-
   return (
-    <>
     <News className="illustration-section-01"/>
-    </>
   );
 }
 
