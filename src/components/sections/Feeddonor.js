@@ -111,10 +111,14 @@ const FeaturesSplit = ({
                   Lightning fast workflow
                   </div> */}
                 <h4 className="mt-0 mb-12">
-                  Name
+                Pankaj Mishra
+
                 </h4>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Age : 17
+                </p>
+                <p className="m-0" style={{fontSize:"14px"}}>
+                  Faridabad
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
@@ -139,10 +143,13 @@ const FeaturesSplit = ({
                   Lightning fast workflow
                   </div> */}
                 <h4 className="mt-0 mb-12">
-                  Name
+                  Varsha Ganguly
                 </h4>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Age : 19
+                </p>
+                <p className="m-0" style={{fontSize:"14px"}}>
+                  Bangalore
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
@@ -167,10 +174,13 @@ const FeaturesSplit = ({
                   Lightning fast workflow
                   </div> */}
                 <h4 className="mt-0 mb-12">
-                  Name
+                  Vinay Mishra
                 </h4>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Age : 16
+                </p>
+                <p className="m-0" style={{fontSize:"14px"}}>
+                  Delhi
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>

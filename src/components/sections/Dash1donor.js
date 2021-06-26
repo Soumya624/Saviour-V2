@@ -86,10 +86,10 @@ const Testimonial = ({
                   </div>
                   <br/>
                   <div style={{marginBottom:"2%"}}>
-                      1. xxxxxxxxxxxxxxxxxx
+                      1. Pankaj MIshra
                   </div>
                   <div>
-                      2. xxxxxxxxxxxxxxxxxx
+                      2. Varsha Ganguly
                   </div>
                   <br/>
                   <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px"}}>Adopt More</a>
@@ -127,10 +127,12 @@ const Testimonial = ({
                 <center>
                 <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem", textAlign:"center"}}/>
                 </center>
-                <h2 style={{margin:"0", color:"black", fontSize:"25px", textAlign:"center"}}>Name</h2>
+                <h2 style={{margin:"0", color:"black", fontSize:"25px", textAlign:"center"}}>Piyush Rastogi</h2>
                 <br/>
                 <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"16px"}}>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                  City : Delhi<br></br>
+                  Pin Code: 110094<br></br>
+                  Phone no.: 7685945324<br></br>
                 </p>
                 </div>
               </div>
