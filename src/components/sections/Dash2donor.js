@@ -88,13 +88,13 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        <ul>
-                                            <li>Age : 17</li>
-                                            <li>Gender : Male</li>
-                                            <li>City : Faridabad</li>
-                                            <li>Phone No : 8745372736</li>
-                                            <li>Class : 10th</li>
-                                        </ul>
+                                        
+                                            Age : 17<br/>
+                                            Gender : Male<br/>
+                                            City : Faridabad<br/>
+                                            Phone No : 8745372736<br/>
+                                            Class : 10th<br/>
+                                        
                                     </p>
                                 </div>
                         </div>
@@ -113,13 +113,13 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                    <ul>
-                                        <li>Age : 19</li>
-                                        <li>Gender : Female</li>
-                                        <li>City : Bangalore</li>
-                                        <li>Phone No : 9898975352</li>
-                                        <li>Class : 11th</li>
-                                    </ul>
+                                    
+                                        Age : 19<br/>
+                                        Gender : Female<br/>
+                                        City : Bangalore<br/>
+                                        Phone No : 9898975352<br/>
+                                        Class : 11th<br/>
+                                    
                                     </p>
                                 </div>
                         </div>

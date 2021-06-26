@@ -80,14 +80,15 @@ const FeaturesSplit = ({
                                     <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
                                     </center>
                                     <p className="text-sm mb-0" style={{textAlign:"center", fontSize:"14px"}}>
-                                        Name
+                                      Pankaj Mishra
                                     </p>
                                     <br/>
                                     <br/>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                    Age: 17<br/>Gender: Male<br/>City: Faridabad<br/>Pin code: 121003<br/>Phone no.: 8745372736<br/>Standard: 10th
+
                                     </p>
                                 </div>
                         </div>
@@ -99,7 +100,7 @@ const FeaturesSplit = ({
                                     <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
                                     </center>
                                     <p className="text-sm mb-0" style={{textAlign:"center", fontSize:"14px"}}>
-                                        Name
+                                    Guardian Name: Ankita Mishra
                                     </p>
                                     <br/>
                                     <br/>
@@ -109,7 +110,8 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                    Guardian Age: 37<br/>Guardian gender: female<br/>Guardian phone: 8745372736<br/>Relation: Mother<br/>Address: neher par, faridabad
+
                                     </p>
                                 </div>
                         </div>
@@ -128,18 +130,21 @@ const FeaturesSplit = ({
                             loader={<div>Loading Chart</div>}
                             data={[
                             ['Task', '100'],
-                            ['Received Marks', 83],
-                            ['Deducted Marks', 17],
+                            ['English', 20.52],
+                            ['Hindi', 20.52],
+                            ['Physics', 20.08],
+                            ['Chemistry', 17.58],
+                            ['Math', 21.3],
                             ]}
                             options={{
-                              title: 'Unit Test: 100',
+                              title: 'Cumulative: 100',
                             }}
                             rootProps={{ 'data-testid': '1' }}
                             />
                             </center>
                             <br/>
                             <p className="text-sm mb-0" style={{fontSize:"14px"}}>
-                              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                              Looking for someone who pay my school fees. (Monthly fees, stationary, test fees.)
                             </p>
                             <br/>
                             <br/>

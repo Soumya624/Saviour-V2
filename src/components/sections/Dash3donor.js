@@ -77,19 +77,22 @@ const FeaturesSplit = ({
                                     <p className="text-sm mb-0" style={{fontSize:"14px"}}>
                                         <center>
                                         <Chart
-                                            width={'100%'}
-                                            height={'100%'}
-                                            chartType="PieChart"
-                                            loader={<div>Loading Chart</div>}
-                                            data={[
-                                                ['Task', '100'],
-                                                ['Received Marks', 83],
-                                                ['Deducted Marks', 17],
-                                            ]}
-                                            options={{
-                                                title: '',
-                                            }}
-                                            rootProps={{ 'data-testid': '1' }}
+                                        width={'100%'}
+                                        height={'100%'}
+                                        chartType="PieChart"
+                                        loader={<div>Loading Chart</div>}
+                                        data={[
+                                        ['Task', '100'],
+                                        ['English', 20.52],
+                                        ['Hindi', 20.52],
+                                        ['Physics', 20.08],
+                                        ['Chemistry', 17.58],
+                                        ['Math', 21.3],
+                                        ]}
+                                        options={{
+                                        title: 'Cumulative: 100',
+                                        }}
+                                        rootProps={{ 'data-testid': '1' }}
                                         />
                                         </center>
                                     </p>
@@ -109,9 +112,9 @@ const FeaturesSplit = ({
                                             <div className="column2" style={{textAlign:"right"}}>
                                                 94.5
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </p>
                                     <br/>
@@ -129,9 +132,9 @@ const FeaturesSplit = ({
                                             <div className="column2" style={{textAlign:"right"}}>
                                                 94.5
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </p>
                                     <br/>
@@ -149,9 +152,9 @@ const FeaturesSplit = ({
                                             <div className="column2" style={{textAlign:"right"}}>
                                                 92.5
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </p>
                                     <br/>
@@ -169,9 +172,9 @@ const FeaturesSplit = ({
                                             <div className="column2" style={{textAlign:"right"}}>
                                                 81
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </p>
                                     <br/>
@@ -189,9 +192,9 @@ const FeaturesSplit = ({
                                             <div className="column2" style={{textAlign:"right"}}>
                                                 98
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </p>
                                     <br/>
@@ -252,7 +255,7 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                    I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
                                     </p><br/>
                                 </div>
                         </div>

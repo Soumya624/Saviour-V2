@@ -100,7 +100,7 @@ const FeaturesTiles = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -108,6 +108,26 @@ const FeaturesTiles = ({
                 </center>
                 </div>
                 <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i2.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i3.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                {/* <div>
                 <center>
                 <Image
                   src={require('./../../assets/images/p3.png')}
@@ -126,27 +146,7 @@ const FeaturesTiles = ({
                 />
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
+                </div> */}
             </Carousel>
             <br/><br/>
           <SectionHeader data={sectionHeader} className="center-content">
@@ -159,10 +159,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
+                      src={require('./../../assets/images/x1.jpg')}
                       alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -181,10 +181,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
+                      src={require('./../../assets/images/x2.jpg')}
                       alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -201,12 +201,12 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
+                  <div className="features-tiles-item-image mb-16" style={{backgroundColor:"white"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                      src={require('./../../assets/images/x7.png')}
                       alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                      width={135}
+                      height={135} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -225,10 +225,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      src={require('./../../assets/images/x4.jpg')}
                       alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -247,10 +247,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
+                      src={require('./../../assets/images/x5.jpg')}
                       alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -269,10 +269,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16" style={{backgroundColor:"#3d946e"}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
+                      src={require('./../../assets/images/x6.jpg')}
                       alt="Features tile icon 06"
-                      width={64}
-                      height={64} />
+                      width={100}
+                      height={100} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">

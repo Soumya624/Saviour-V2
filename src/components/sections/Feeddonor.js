@@ -118,7 +118,7 @@ const FeaturesSplit = ({
                   Age : 17
                 </p>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Faridabad
+                I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
@@ -131,9 +131,9 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 01"
-                  style={{width:"60%", borderRadius:"50%"}} />
+                  style={{width:"60%"}} />
               </div>
             </div>
 
@@ -149,7 +149,7 @@ const FeaturesSplit = ({
                   Age : 19
                 </p>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Bangalore
+                I am an athletics girl who loves to play badminton and wants to pursue my career here. I won many medals for my school. Unfortunately this pandemic stuck as bad. My father is on medical rest for life because of nervous disease and my mother passed when i was just 5.
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
@@ -162,9 +162,9 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i3.jpg')}
                   alt="Features split 01"
-                  style={{width:"60%", borderRadius:"50%"}} />
+                  style={{width:"60%"}} />
               </div>
             </div>
 
@@ -180,7 +180,7 @@ const FeaturesSplit = ({
                   Age : 16
                 </p>
                 <p className="m-0" style={{fontSize:"14px"}}>
-                  Delhi
+                I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
                 </p>
                 <center>
                     <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
@@ -193,9 +193,9 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i2.jpg')}
                   alt="Features split 01"
-                  style={{width:"60%", borderRadius:"50%"}} />
+                  style={{width:"60%"}} />
               </div>
             </div>
             <br/>
@@ -204,7 +204,7 @@ const FeaturesSplit = ({
                 <div>
                 <center>
                 <Image
-                  src={require('./../../assets/images/p3.png')}
+                  src={require('./../../assets/images/i1.jpg')}
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
@@ -212,6 +212,26 @@ const FeaturesSplit = ({
                 </center>
                 </div>
                 <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i2.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                <div>
+                <center>
+                <Image
+                  src={require('./../../assets/images/i3.jpg')}
+                  alt="Features split 03"
+                  style={{width:"50%"}}
+                />
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                </center>
+                </div>
+                {/* <div>
                 <center>
                 <Image
                   src={require('./../../assets/images/p3.png')}
@@ -230,27 +250,7 @@ const FeaturesSplit = ({
                 />
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
-                <div>
-                <center>
-                <Image
-                  src={require('./../../assets/images/p3.png')}
-                  alt="Features split 03"
-                  style={{width:"50%"}}
-                />
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
-                </center>
-                </div>
+                </div> */}
             </Carousel>;
           </div>
         </div>
