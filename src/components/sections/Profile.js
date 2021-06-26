@@ -92,7 +92,7 @@ const FeaturesSplit = ({
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
-                                    <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
+                                    <img src={require('./../../assets/images/i3.jpg')} alt="" style={{width:"70%"}}/>
                                     </center>
                                     <p className="text-sm mb-0" style={{textAlign:"center", fontSize:"14px"}}>
                                         

@@ -104,6 +104,7 @@ const FeaturesTiles = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
+                <p style={{fontSize:"14px", marginTop:"2%"}}>Ankit Mishra<br/>Age: 15<br/>City: Faridabad<br/></p>
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>
@@ -114,6 +115,8 @@ const FeaturesTiles = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
+                <p style={{fontSize:"14px", marginTop:"2%"}}>Palkit Mishra<br/>Age: 17<br/>City: Faridabad<br/></p>
+                
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>
@@ -124,6 +127,7 @@ const FeaturesTiles = ({
                   alt="Features split 03"
                   style={{width:"50%"}}
                 />
+                <p style={{fontSize:"14px", marginTop:"2%"}}>Ankita Mishra<br/>Age: 16<br/>City: Faridabad<br/></p>
                 <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>

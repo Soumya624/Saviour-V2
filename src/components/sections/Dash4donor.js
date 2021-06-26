@@ -108,98 +108,126 @@ const FeaturesSplit = ({
                   <br/>
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                            <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    English
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    98
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    91
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    94.5
-                                </div>
-                                {/* <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div> */}
-                            </div>
+                        <div className="row">
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Subjects
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Number
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Test 1
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Test 2
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Cumulative
+                                            </div>
+                                        </div><br/>
+                                        <div className="row">
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                English
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                98
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                91
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                94.5
+                                            </div>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
+                                                XX
+                                            </div> */}
+                                        </div>
                             <br/>
                             <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    Hindi
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    90
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    99
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    94.5
-                                </div>
-                                {/* <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div> */}
-                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Hindi
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                90
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                99
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                94.5
+                                            </div>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
+                                                XX
+                                            </div> */}
+                                        </div>
                         </p>
                     </div>
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                            <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    Physics
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    92
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    93
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    92.5
-                                </div>
-                                {/* <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div> */}
-                            </div>
+                        <div className="row">
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Physics
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                92
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                93
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                92.5
+                                            </div>
+                                            {/* <div className="column2" style={{textAlign:"center"}}>
+                                                XX
+                                            </div> */}
+                                        </div>
                             <br/>
                             <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    Chemistry
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    81
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    -
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    81
-                                </div>
-                                {/* <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div> */}
-                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Chemistry
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                01
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                91
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                -
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                81
+                                            </div>
+                                            
+                                        </div>
                             <br/>
                             <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    Maths
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    98
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    -
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    98
-                                </div>
-                                {/* <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div> */}
-                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Maths
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                01
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                98
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                -
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                98
+                                            </div>
+                                            
+                                        </div>
                         </p>
                     </div>
                 </p>
