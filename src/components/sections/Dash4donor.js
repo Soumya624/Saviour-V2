@@ -110,13 +110,13 @@ const FeaturesSplit = ({
                                     English
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    98
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    XX
+                                    91
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    94.5
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
                                     XX
@@ -125,16 +125,16 @@ const FeaturesSplit = ({
                             <br/>
                             <div className="row">
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    English
+                                    Maths
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    98
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    XX
+                                    -
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    98
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
                                     XX
@@ -146,31 +146,13 @@ const FeaturesSplit = ({
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                             <div className="row">
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    English
+                                    Physics
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    92
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    XX
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    XX
-                                </div>
-                            </div>
-                            <br/>
-                            <div className="row">
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    English
-                                </div>
-                                <div className="column2" style={{textAlign:"right"}}>
-                                    XX
-                                </div>
-                                <div className="column2" style={{textAlign:"center"}}>
-                                    XX
+                                    93
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
                                     XX
@@ -182,16 +164,34 @@ const FeaturesSplit = ({
                             <br/>
                             <div className="row">
                                 <div className="column2" style={{textAlign:"center"}}>
-                                    English
+                                    Chemistry
                                 </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    81
+                                </div>
+                                <div className="column2" style={{textAlign:"center"}}>
+                                    -
+                                </div>
+                                <div className="column2" style={{textAlign:"right"}}>
+                                    81
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
                                     XX
                                 </div>
+                            </div>
+                            <br/>
+                            <div className="row">
+                                <div className="column2" style={{textAlign:"center"}}>
+                                    Hindi
+                                </div>
                                 <div className="column2" style={{textAlign:"right"}}>
-                                    XX
+                                    90
+                                </div>
+                                <div className="column2" style={{textAlign:"center"}}>
+                                    99
+                                </div>
+                                <div className="column2" style={{textAlign:"right"}}>
+                                    94.5
                                 </div>
                                 <div className="column2" style={{textAlign:"center"}}>
                                     XX
@@ -207,11 +207,9 @@ const FeaturesSplit = ({
                     <a href="#" style={{color:"grey", fontSize:"14px", margin:"0.5rem"}}>EAA</a>
                         <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", width:"80%"}}>
                             <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                            </p>
+                            2 times school badminton winner, 4 academy medals- 2gold, 1 silver, 1 bronze; Best player of the year, District champion Bangalore.                             </p>
                             <br/>
                             <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
                             </p>
                         </div>
                     </center>

@@ -101,13 +101,13 @@ const FeaturesSplit = ({
                                                 English
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                98
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                XX
+                                                91
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                94.5
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -118,16 +118,16 @@ const FeaturesSplit = ({
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                English
+                                                Hindi
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                90
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                XX
+                                                99
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                94.5
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -138,16 +138,16 @@ const FeaturesSplit = ({
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                English
+                                                Physics
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                92
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                XX
+                                                93
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                92.5
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -158,16 +158,16 @@ const FeaturesSplit = ({
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                English
+                                                Chemistry
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                91
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                XX
+                                                -
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                81
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -178,16 +178,16 @@ const FeaturesSplit = ({
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                English
+                                                Maths
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                98
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
-                                                XX
+                                                -
                                             </div>
                                             <div className="column2" style={{textAlign:"right"}}>
-                                                XX
+                                                98
                                             </div>
                                             <div className="column2" style={{textAlign:"center"}}>
                                                 XX
