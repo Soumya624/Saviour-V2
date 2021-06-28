@@ -77,7 +77,7 @@ const FeaturesSplit = ({
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1%"}}>
-                                    <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
+                                    <img src={require('./../../assets/images/i2.jpg')} alt="" style={{width:"70%"}}/>
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         Pankaj Mishra
@@ -102,7 +102,7 @@ const FeaturesSplit = ({
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1%"}}>
-                                    <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem"}}/>
+                                    <img src={require('./../../assets/images/i3.jpg')} alt="" style={{width:"70%"}}/>
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         Varsha Ganguly

@@ -72,8 +72,8 @@ const FeaturesSplit = ({
            <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Academics</a>
            </center>
            <div className="abc">
-                        <div className="row" style={{alignItems:"center"}}> 
-                                <div className="column4" style={{padding:"1%"}}>
+                        <div className="split-item" style={{alignItems:"center"}}> 
+                                <div className="split-item-content center-content-mobile" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{fontSize:"14px"}}>
                                         <center>
                                         <Chart
@@ -97,19 +97,42 @@ const FeaturesSplit = ({
                                         </center>
                                     </p>
                                 </div>
-                                <div className="column3" style={{padding:"1%"}}>
+                                <div className="split-item-image center-content-mobile" style={{padding:"1%"}}>
+                                <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
+                                        <div className="row">
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Subjects
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Number
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Test 1
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Test 2
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                Cumulative
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 English
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 98
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 91
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 94.5
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
@@ -120,16 +143,19 @@ const FeaturesSplit = ({
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 Hindi
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 90
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 99
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 94.5
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
@@ -140,16 +166,19 @@ const FeaturesSplit = ({
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 Physics
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                02
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 92
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 93
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 92.5
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
@@ -160,41 +189,43 @@ const FeaturesSplit = ({
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 Chemistry
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                01
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 91
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 -
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 81
                                             </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
+                                            
                                         </div>
                                     </p>
                                     <br/>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 Maths
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
+                                                01
+                                            </div>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 98
                                             </div>
-                                            <div className="column2" style={{textAlign:"center"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 -
                                             </div>
-                                            <div className="column2" style={{textAlign:"right"}}>
+                                            <div className="column2" style={{textAlign:"left"}}>
                                                 98
                                             </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
+                                            
                                         </div>
                                     </p>
                                     <br/>
@@ -249,13 +280,14 @@ const FeaturesSplit = ({
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column" style={{padding:"1%"}}>
                                     <center>
-                                    <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"30%"}}/>
+                                    <img src={require('./../../assets/images/i3.jpg')} alt="" style={{width:"50%"}}/>
                                     </center>
                                     <br/>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                    I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
+                                    I need financial assistance to complete my school. I am a topper of my class. Everyone loves me because of my polite nature. Now things have changed, we have no resource to complete my schooling. I am looking for my virtual parent here who will take care of my studies. I will prove myself and will forever be grateful to person who will help me.<br/>
+                                    Guardian Age: 37<br/>Guardian gender: female<br/>Guardian phone: 8745372736<br/>Relation: Mother<br/>Address: neher par, faridabad
                                     </p><br/>
                                 </div>
                         </div>
