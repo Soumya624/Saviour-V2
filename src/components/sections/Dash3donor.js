@@ -238,7 +238,7 @@ const FeaturesSplit = ({
            <center>
            <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Journal</a>
            </center>
-           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #3d946e"}}>
+           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #3d946e", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column2" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>

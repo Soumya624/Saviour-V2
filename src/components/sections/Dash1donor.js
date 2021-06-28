@@ -122,7 +122,7 @@ const Testimonial = ({
 
           <div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom" style={{backgroundColor:"#ffffff", borderRadius:"0", margin:"1%"}}>
-              <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"0", border:"1px solid #3d946e"}}>
+              <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"0", border:"1px solid #3d946e", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                 <div>
                 <center>
                 <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem", textAlign:"center"}}/>

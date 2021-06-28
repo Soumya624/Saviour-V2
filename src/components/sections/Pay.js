@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import logo from './logo.svg'
+import logo from './../../assets/images/eDOPT.png';
 
 function loadScript(src) {
 	return new Promise((resolve) => {

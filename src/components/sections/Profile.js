@@ -88,7 +88,7 @@ const FeaturesSplit = ({
                 <p className="m-0" style={{alignItems:"center"}}>
                   <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
                   <br/>
-                  <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
+                  <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
@@ -138,7 +138,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                     <center>
                     <a href="#" style={{color:"grey", fontSize:"14px", margin:"0.5rem"}}>Schedule a Meeting</a>
-                        <div style={{border:"1px solid #3d946e", padding:"9%", margin:"4% 0%", width:"80%"}}>
+                        <div style={{border:"1px solid #3d946e", padding:"9%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                             <Calendar/>
                             <br/><br/>
                             <TimePicker />

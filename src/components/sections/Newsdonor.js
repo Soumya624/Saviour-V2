@@ -101,6 +101,7 @@ const FeaturesSplit = ({
               </svg>
             </Input>
             <p>{t('key17')}</p>
+            <p>{t('key34')}!</p>
           </SectionHeader>
           <div className={splitClasses}>
 
