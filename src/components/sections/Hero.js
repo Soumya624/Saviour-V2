@@ -147,7 +147,7 @@ const Hero = ({
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
-                <img src="childrenRun.png" alt="" style={{width:"90%"}}/>
+                <img src="childrenRun.png" alt="" style={{width:"88%"}}/>
               </div>
             </div>
           </div>
