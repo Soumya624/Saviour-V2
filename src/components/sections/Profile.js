@@ -86,9 +86,9 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <p className="m-0" style={{alignItems:"center"}}>
-                  <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
+                  <a href="/Feed_Donor" style={{color:"#f1b12a", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
                   <br/>
-                  <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                  <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
@@ -100,7 +100,7 @@ const FeaturesSplit = ({
                                     <br/>
                                     <br/>
                                     <center>
-                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Call</Link>
+                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Call</Link>
                                     </center>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
@@ -138,13 +138,13 @@ const FeaturesSplit = ({
                 <p className="m-0">
                     <center>
                     <a href="#" style={{color:"grey", fontSize:"14px", margin:"0.5rem"}}>Schedule a Meeting</a>
-                        <div style={{border:"1px solid #3d946e", padding:"9%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                        <div style={{border:"1px solid #f1b12a", padding:"9%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                             <Calendar/>
                             <br/><br/>
                             <TimePicker />
                             <br/><br/>
-                            <a href="#" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Meet Now</a>
-                            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Go Ahead</a>
+                            <a href="#" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Meet Now</a>
+                            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Go Ahead</a>
                         </div>
                 </center>
                 </p>

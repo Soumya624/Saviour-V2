@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import { x } from '../../sections/Hero';
+import SimpleReactFooter from "simple-react-footer";
 console.log(`${x}`)
+
 
 const FooterNav = ({
   className,

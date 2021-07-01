@@ -22,7 +22,10 @@
     "react-multi-carousel": "^2.6.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "react-time-picker": "^4.3.0"
+    "react-simple-card": "^2.0.2",
+    "react-time-picker": "^4.3.0",
+    "react-ui-cards": "^2.0.0",
+    "simple-react-footer": "^1.0.2"
   },
   "repository": {
     "type": "git",

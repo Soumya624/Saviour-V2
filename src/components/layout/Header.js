@@ -252,7 +252,7 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
-                    <li>
+                    {/* <li>
                       <Link to="/" onClick={closeMenu}>{t('key3')}</Link>
                     </li>
                     <li>
@@ -260,14 +260,20 @@ const Header = ({
                     </li>
                     <li>
                       <Link to="/News_Donor" onClick={closeMenu}>{t('key5')}</Link>
-                    </li>
+                    </li> */}
                   </ul>
                   {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/Signup_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>{t('key6')}</Link>
+                        <Link to="/Signup_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#f1b12a", borderRadius:"5px"}}>Start a Fundraiser</Link>
+                      </li>
+                      <li>
+                        <Link to="/Login_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#f1b12a", borderRadius:"5px"}}>eDOPT a Child</Link>
+                      </li>
+                      <li>
+                        <Link to="/Login_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#ffffff", borderRadius:"5px", borderColor:"#f1b12a", color:"#f1b12a"}}>Login/Signup</Link>
                       </li>
                     </ul>}
                 </div>

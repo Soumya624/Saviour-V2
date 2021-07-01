@@ -112,19 +112,19 @@ const FeaturesSplit = ({
                       <br />
                       <div className="row">
                         <div className="columnl">
-                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Google</Link>
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #f1b12a", color: "#f1b12a", width: "95%" }}>Google</Link>
                         </div>
                         <div className="columnl">
-                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Instagram</Link>
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #f1b12a", color: "#f1b12a", width: "95%" }}>Instagram</Link>
                         </div>
                         <div className="columnl">
-                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #3d946e", color: "#3d946e", width: "95%" }}>Facebook</Link>
+                          <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#ffffff", borderRadius: "20px", border: "1px solid #f1b12a", color: "#f1b12a", width: "95%" }}>Facebook</Link>
                         </div>
                       </div>
                     </center>
                     <br />
                     <center>
-                      <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Signup</Link>
+                      <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#f1b12a", borderRadius: "20px" }}>Signup</Link>
                       <br /><br />{t('key29')} <a href="/Login_Donor">{t('key28')}</a>
                     </center>
                   </form>

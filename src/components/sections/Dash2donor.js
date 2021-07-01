@@ -72,9 +72,9 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <p className="m-0" style={{alignItems:"center"}}>
-                  <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
+                  <a href="/Feed_Donor" style={{color:"#f1b12a", fontSize:"14px", margin:"0rem"}}>Adopt More</a>
                   <br/>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1%"}}>
                                     <img src={require('./../../assets/images/i2.jpg')} alt="" style={{width:"70%"}}/>
@@ -84,7 +84,7 @@ const FeaturesSplit = ({
                                     </p>
                                     <br/>
                                     <br/>
-                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Show More</Link>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
@@ -99,7 +99,7 @@ const FeaturesSplit = ({
                                 </div>
                         </div>
                     </div>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1%"}}>
                                     <img src={require('./../../assets/images/i3.jpg')} alt="" style={{width:"70%"}}/>
@@ -109,7 +109,7 @@ const FeaturesSplit = ({
                                     </p>
                                     <br/>
                                     <br/>
-                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to="/Dashboard3_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Show More</Link>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
@@ -130,7 +130,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                     <center>
                     <a href="#" style={{color:"grey", fontSize:"14px", margin:"0.5rem"}}>Recent Notification</a>
-                        <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                        <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                             <div className="row" style={{padding:"1%"}}>
                                 <div className="column">
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"16px"}}>

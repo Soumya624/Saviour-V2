@@ -17,7 +17,7 @@ const defaultProps = {
   ...SectionSplitProps.defaults
 }
 
-const FeaturesSplit = ({
+const Testimonial = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -31,6 +31,8 @@ const FeaturesSplit = ({
   imageFill,
   ...props
 }) => {
+  
+  console.log(props);
 
   const outerClasses = classNames(
     'features-split section',
@@ -69,7 +71,7 @@ const FeaturesSplit = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
           <center>
-           <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Academics</a>
+           <a href="#" style={{color:"#f1b12a", fontSize:"14px", margin:"0rem"}}>Academics</a>
            </center>
            <div className="abc">
                         <div className="split-item" style={{alignItems:"center"}}> 
@@ -229,16 +231,16 @@ const FeaturesSplit = ({
                                         </div>
                                     </p>
                                     <br/>
-                                    <Link to="/Dashboard4_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to="/Dashboard4_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Show More</Link>
                                 </div>
                         </div>
             </div>
 
 
            <center>
-           <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Journal</a>
+           <a href="#" style={{color:"#f1b12a", fontSize:"14px", margin:"0rem"}}>Journal</a>
            </center>
-           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #3d946e", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #f1b12a", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column2" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
@@ -270,7 +272,7 @@ const FeaturesSplit = ({
                                     </Input>
                                 </div>
                                 <div className="column2" style={{padding:"1%"}}>
-                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Send</Link>
+                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Send</Link>
                                 </div>
                         </div>
             </div>
@@ -299,7 +301,7 @@ const FeaturesSplit = ({
   );
 }
 
-FeaturesSplit.propTypes = propTypes;
-FeaturesSplit.defaultProps = defaultProps;
+Testimonial.propTypes = propTypes;
+Testimonial.defaultProps = defaultProps;
 
-export default FeaturesSplit;
+export default Testimonial;

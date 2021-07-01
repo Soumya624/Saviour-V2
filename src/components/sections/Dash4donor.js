@@ -32,6 +32,9 @@ const FeaturesSplit = ({
   ...props
 }) => {
 
+
+    console.log(props);
+    
   const outerClasses = classNames(
     'features-split section',
     topOuterDivider && 'has-top-divider',
@@ -106,7 +109,7 @@ const FeaturesSplit = ({
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <p className="m-0" style={{alignItems:"center"}}>
                   <br/>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                         <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
@@ -168,7 +171,7 @@ const FeaturesSplit = ({
                                         </div>
                         </p>
                     </div>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                         <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
@@ -236,7 +239,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                     <center>
                     <a href="#" style={{color:"grey", fontSize:"14px", margin:"0.5rem"}}>EAA</a>
-                        <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                        <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                             <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                             2 times school badminton winner<br/>4 academy medals- 2gold, 1 silver, 1 bronze<br/>Best player of the year<br/>District champion Bangalore.                             </p>
                             <br/>
@@ -251,7 +254,7 @@ const FeaturesSplit = ({
           </div>
           <center>
             <br/><br/>
-            <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Open</Link>
+            <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Open</Link>
           </center>
         </div>
       </div>

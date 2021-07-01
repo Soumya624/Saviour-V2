@@ -337,7 +337,7 @@ const FeaturesSplit = ({
               href="/Declaration"
               className="button button-primary button-wide-mobile button-sm"
               style={{
-                backgroundColor: "#3d946e",
+                backgroundColor: "#f1b12a",
                 margin: "1%",
                 borderRadius: "20px",
               }}
@@ -348,7 +348,7 @@ const FeaturesSplit = ({
               href="/Profile"
               className="button button-primary button-wide-mobile button-sm"
               style={{
-                backgroundColor: "#3d946e",
+                backgroundColor: "#f1b12a",
                 margin: "1%",
                 borderRadius: "20px",
               }}

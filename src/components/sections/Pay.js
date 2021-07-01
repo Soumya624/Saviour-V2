@@ -92,8 +92,8 @@ function App() {
                     Click the following button!
                 </p> */}
                 <br/>
-                <a href="#" onClick={displayRazorpay} target="_blank" rel="noopener noreferrer" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Donate</a>
-                <a href="/Declaration" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Cancel</a>
+                <a href="#" onClick={displayRazorpay} target="_blank" rel="noopener noreferrer" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Donate</a>
+                <a href="/Declaration" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Cancel</a>
               </center>
               <br/>
           </div>

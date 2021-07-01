@@ -72,7 +72,7 @@ const FeaturesSplit = ({
         <div className="container">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content">
-              <h2>{t('key26')}</h2>
+              <h2>{t('key25')}</h2>
             </SectionHeader>
             <div className={splitClasses}>
 
@@ -173,7 +173,7 @@ const FeaturesSplit = ({
               </center>
               <br /> */}
               <center>
-                <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Signup</Link>
+                <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#f1b12a", borderRadius: "20px" }}>Signup</Link>
                 <br /><br />{t('key29')} <a href="/Login_Student">{t('key28')}</a>
               </center>
             </div>

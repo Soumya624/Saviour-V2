@@ -122,7 +122,7 @@ const FeaturesSplit = ({
                 I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
                 </p>
                 <center>
-                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
               </div>
               <div className={
@@ -153,7 +153,7 @@ const FeaturesSplit = ({
                 I am an athletics girl who loves to play badminton and wants to pursue my career here. I won many medals for my school. Unfortunately this pandemic stuck as bad. My father is on medical rest for life because of nervous disease and my mother passed when i was just 5.
                 </p>
                 <center>
-                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
               </div>
               <div className={
@@ -184,7 +184,7 @@ const FeaturesSplit = ({
                 I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
                 </p>
                 <center>
-                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
               </div>
               <div className={
@@ -210,7 +210,7 @@ const FeaturesSplit = ({
                   style={{width:"50%"}}
                 />
                 <p style={{fontSize:"14px", marginTop:"2%"}}>Ankit Mishra<br/>Age: 15<br/>City: Faridabad<br/></p>
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>
                 <div>
@@ -222,7 +222,7 @@ const FeaturesSplit = ({
                 />
                 <p style={{fontSize:"14px", marginTop:"2%"}}>Palkit Mishra<br/>Age: 17<br/>City: Faridabad<br/></p>
                 
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>
                 <div>
@@ -233,7 +233,7 @@ const FeaturesSplit = ({
                   style={{width:"50%"}}
                 />
                 <p style={{fontSize:"14px", marginTop:"2%"}}>Ankita Mishra<br/>Age: 16<br/>City: Faridabad<br/></p>
-                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
+                <a href="/Profile" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", borderRadius:"20px", marginTop:"2%"}}>Read More</a>
                 </center>
                 </div>
                 {/* <div>

@@ -132,7 +132,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>{t('key32')}</Link>
+                        <Link to="/Login_Student" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#f1b12a"}}>{t('key32')}</Link>
                       </li>
                     </ul>}
                 </div>

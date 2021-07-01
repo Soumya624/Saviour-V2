@@ -61,9 +61,21 @@
   float: left;
   width: 50%;
 }
-.columnq {
+
+.columnx1 {
   float: left;
-  width: 66%;
+  width: 45%;
+  font-size: 70%;
+}
+.columnx2 {
+  float: left;
+  width: 27%;
+  font-size: 70%;
+}
+.columnx3 {
+  float: left;
+  width: 27%;
+  font-size: 70%;
 }
 @media screen and (max-width: 768px) {
   .column {
@@ -93,5 +105,15 @@
   .column8 {
     float: left;
     width: 100%;
+  }
+
+  .columnx1 {
+    font-size: 50%;
+  }
+  .columnx2 {
+    font-size: 50%;
+  }
+  .columnx3 {
+    font-size: 50%;
   }
 }

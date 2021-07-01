@@ -81,7 +81,7 @@ const Testimonial = ({
                         <a href="#" style={{textDecoration:"none", color:"black", marginRight:"3%"}}>eDOPTED</a>  2
                       </div>
                       <div className="column">
-                      <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                      <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Show More</Link>
                       </div>
                   </div>
                   <br/>
@@ -92,7 +92,7 @@ const Testimonial = ({
                       2. Varsha Ganguly
                   </div>
                   <br/>
-                  <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px"}}>Adopt More</a>
+                  <a href="/Feed_Donor" style={{color:"#f1b12a", fontSize:"14px"}}>Adopt More</a>
                 </p>
               </div>
               <div className='split-item-image center-content-mobile reveal-from-bottom' data-reveal-container=".split-item" style={{paddingLeft:"2%"}}>
@@ -100,10 +100,10 @@ const Testimonial = ({
                     <div className="row">
                       <div className="column">
                       &#169; Ace<br/>
-                        435353456 <a href="#" style={{color:"#3d946e", fontSize:"12px", marginLeft:"5px"}}>T&C</a>
+                        435353456 <a href="#" style={{color:"#f1b12a", fontSize:"12px", marginLeft:"5px"}}>T&C</a>
                       </div>
                       <div className="column">
-                      <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Gain More</Link>
+                      <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Gain More</Link>
                       </div>
                     </div>
                     <br/>
@@ -122,7 +122,7 @@ const Testimonial = ({
 
           <div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom" style={{backgroundColor:"#ffffff", borderRadius:"0", margin:"1%"}}>
-              <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"0", border:"1px solid #3d946e", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+              <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"0", border:"1px solid #f1b12a", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                 <div>
                 <center>
                 <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem", textAlign:"center"}}/>

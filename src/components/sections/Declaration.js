@@ -92,8 +92,8 @@ const FeaturesSplit = ({
             <br/><br/>
             <Input type="file" style={{borderRadius:"20px", borderColor:"grey", color:"grey"}}/>
             <br/>
-            <a href="/Pay" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Pay Now</a>
-            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Cancel</a>
+            <a href="/Pay" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Pay Now</a>
+            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#f1b12a", margin:"1%", borderRadius:"20px"}}>Cancel</a>
             </center>
         </div>
       </div>

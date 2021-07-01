@@ -73,7 +73,7 @@ const FeaturesSplit = ({
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <p className="m-0" style={{alignItems:"center"}}>
                   <br/>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
@@ -93,7 +93,7 @@ const FeaturesSplit = ({
                                 </div>
                         </div>
                     </div>
-                    <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                    <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                         <div className="row"> 
                                 <div className="column" style={{padding:"1% 1% 1% 0%"}}>
                                     <center>
@@ -105,7 +105,7 @@ const FeaturesSplit = ({
                                     <br/>
                                     <br/>
                                     <center>
-                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Call</Link>
+                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#f1b12a"}}>Call</Link>
                                     </center>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
@@ -121,7 +121,7 @@ const FeaturesSplit = ({
               <div className=' center-content-mobile reveal-from-bottom' data-reveal-container=".split-item" style={{paddingLeft:"2%"}}>
                 <p className="m-0">
                     <center>
-                        <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
+                        <div style={{border:"1px solid #f1b12a", padding:"7%", margin:"4% 0%", width:"80%", borderRadius:"20px", boxShadow: "5px 5px #f1f1f1"}}>
                           <center>
                           <Chart
                             width={'100%'}
