@@ -8,7 +8,7 @@ const SectionShared = {
     topDivider: PropTypes.bool,
     bottomDivider: PropTypes.bool,
     hasBgColor: PropTypes.bool,
-    invertColor: PropTypes.bool
+    invertColor: PropTypes.bool,
   },
   defaults: {
     topOuterDivider: false,
@@ -16,7 +16,7 @@ const SectionShared = {
     topDivider: false,
     bottomDivider: false,
     hasBgColor: false,
-    invertColor: false
+    invertColor: false,
   }
 }
 

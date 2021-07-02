@@ -1,3 +1,6 @@
+import {useState, useEffect} from 'react';
+import axios from "../../api/axios";
+
 import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
@@ -32,6 +35,8 @@ const FeaturesSplit = ({
   ...props
 }) => {
 
+
+  console.log(props.location)  
   const outerClasses = classNames(
     'features-split section',
     topOuterDivider && 'has-top-divider',
@@ -59,6 +64,36 @@ const FeaturesSplit = ({
     paragraph: ''
   };
 
+
+  const [student,setStudent]=useState(props.location.state.student)
+  const [donortoken,setDonortoken]=useState(props.location.state.donordata)
+  const [studentMarklist,setStudentMarklist]=useState([])
+  const [donorStudents,setDonorStudents]=useState([])
+  useEffect(() => {
+    axios.get('/adoptedStudents', {
+        headers : {
+            email:donortoken.email,
+            authorization: donortoken
+        }
+    }).then((response) => {
+            console.log(response.data)
+            setDonorStudents(response.data)
+        })
+  }, []);
+  
+  useEffect(() => {
+    axios.get('/getMarks', {
+        headers : {
+            email:props.location.state.email,
+            authorization: donortoken
+        }
+    }).then((response) => {
+            console.log(response.data)
+            //console.log(index)
+            setStudentMarklist(response.data)
+        
+        })
+  }, []);
   return (
     <section
       {...props}
@@ -95,7 +130,8 @@ const FeaturesSplit = ({
                                 </div>
                                 <div className="column3" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                    I am a bright student in my class. I have keen interest towards astronomy. Now my father is passed due to covid and my family is facing extreme financial difficulties.I come from lower middle class.
+                                    i want to be an {student.aim}
+    
                                     </p>
                                 </div>
                         </div>
@@ -125,51 +161,51 @@ const FeaturesSplit = ({
                                                 Cumulative
                                             </div>
                                         </div><br/>
-                                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                English
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                02
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                98
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                91
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                94.5
-                                            </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
-                                        </div>
-                            <br/>
-                            <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Hindi
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                02
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                90
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                99
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                94.5
-                                            </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
-                                        </div>
+                                        {studentMarklist.map((subject,index)=>{
+                                            if (index>=2){
+                                                return
+                                            }
+                                            else{
+                                                return(
+                                                    <div className="row">
+                                                    <div className="column2" style={{textAlign:"left"}}>
+                                                        {subject.subject}
+                                                    </div>
+                                                    <div className="column2" style={{textAlign:"left"}}>
+                                                        {index}
+                                                    </div>
+                                                    <div className="column2" style={{textAlign:"left"}}>
+                                                        {subject.marks[0]}
+                                                    </div>
+                                                    <div className="column2" style={{textAlign:"left"}}>
+                                                        {subject.marks[1]}
+                                                    </div>
+                                                    <div className="column2" style={{textAlign:"left"}}>
+                                                        {subject.marks[1]}
+                                                    </div>
+                                                    {/* <div className="column2" style={{textAlign:"center"}}>
+                                                        XX
+                                                    </div> */}
+                                                </div>
+                                                  
+                                                )
+                                            }
+                                        })}
+                                        
+                                <br/>
+                            
                         </p>
                     </div>
                     <div style={{border:"1px solid #3d946e", padding:"7%", margin:"4% 0%"}}>
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
+                        
+                        {studentMarklist.map((subject,index)=>{
+                            if (index<2){
+                                return
+                            }
+                            else{}
+                            
+                        })}
                         <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
                                                 Physics
@@ -191,6 +227,7 @@ const FeaturesSplit = ({
                                             </div> */}
                                         </div>
                             <br/>
+                           
                             <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
                                                 Chemistry

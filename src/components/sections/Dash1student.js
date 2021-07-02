@@ -59,6 +59,8 @@ const FeaturesSplit = ({
     paragraph: ''
   };
 
+  
+  
   return (
     <section
       {...props}

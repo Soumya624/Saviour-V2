@@ -7,11 +7,11 @@ import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
 import Dash3 from '../components/sections/Dash3donor';
 
-const Home = () => {
+const Home = (props) => {
 
   return (
     <>
-    <Dash3 className="illustration-section-01"/>
+    <Dash3 {...props} className="illustration-section-01"/>
     </>
   );
 }

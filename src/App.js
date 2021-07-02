@@ -27,6 +27,9 @@ import LoginStudent from './views/LoginStudent';
 import SignupStudent from './views/SignupStudent';
 import Dash1Student from './views/DashboardprimaryStudent';
 
+import {Route} from 'react-router-dom' 
+
+
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -68,6 +71,7 @@ const App = () => {
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Dashboard1_Student" component={Dash1Student} layout={LayoutStudent} />
+          
         </Switch>
       )} />
   );

@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react';
+import axios from "../../api/axios";
 import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
@@ -8,16 +10,21 @@ import { Link } from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import { Chart } from "react-google-charts";
+import { constant } from 'lodash';
 
+
+
+//const index = this.props.location.state.prodIndex;
 const propTypes = {
   ...SectionSplitProps.types
 }
 
 const defaultProps = {
-  ...SectionSplitProps.defaults
+  ...SectionSplitProps.defaults,
 }
 
-const FeaturesSplit = ({
+
+const FeaturesSplit= ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -30,8 +37,11 @@ const FeaturesSplit = ({
   alignTop,
   imageFill,
   ...props
+  
 }) => {
+  
 
+  console.log(props.location)  
   const outerClasses = classNames(
     'features-split section',
     topOuterDivider && 'has-top-divider',
@@ -58,7 +68,66 @@ const FeaturesSplit = ({
     title: '',
     paragraph: ''
   };
+  /* const userToken = {
+    "id" :"60c8e5237af1f560e4795ba0",
+    "name":"sakshi",
+    "age":20,
+    "gender":"female",
+    "address":"abc ",
+    "city":"indore",
+    "pin":452007,
+    "phone":"9348386468",
+    "email":"abc123@gmail.com",
+    "password":"abc123",
+    "adoptionCount":1,
+    "_v":0,
+    "students":["60d1953d5fcf144e544c1551"]
+}
+const userToken1 = {
+    userType: "student",
+    id: '60c8c89c4604cf597c04a824',
+    grade: 12,
+    name: 'sakshi',
+    email: 'aj@gmail.com',
+    phone: '9348386468'
+} */
+  const [donortoken,setDonortoken]=useState(props.location.state.donordata)
+  const [donorStudents,setDonorStudents]=useState([])
+  const [studentMarklist,setStudentMarklist]=useState([])
+  const [stdEmail,setStdEmail]=useState('')
+  const [cumulative,setCumalative]=useState([])
+  const [pieChart,setPieChart]=useState([])
+  const [student,setStudent]=useState(props.location.state.student)
+  //setStdEmail(props.location.state.email)
+  
 
+  useEffect(() => {
+    axios.get('/getMarks', {
+        headers : {
+            email:props.location.state.email,
+            authorization: donortoken
+        }
+    }).then((response) => {
+            //console.log(response.data)
+            //console.log(index)
+            setStudentMarklist(response.data)
+        
+        })
+  }, []);
+  
+  useEffect(() => {
+    axios.get('/adoptedStudents', {
+        headers : {
+            email:donortoken.email,
+            authorization: donortoken
+        }
+    }).then((response) => {
+            console.log(response.data)
+            setDonorStudents(response.data)
+        })
+  }, []);
+  
+  //const index = this.props.location.state.prodIndex;
   return (
     <section
       {...props}
@@ -118,118 +187,37 @@ const FeaturesSplit = ({
                                         </div>
                                     </p>
                                     <br/>
-                                    <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
+                                    {studentMarklist.map((subject,index)=>{
+                                        return (<p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                English
+                                                {subject.subject}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                02
+                                                {index}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                98
+                                                {subject.marks[0]}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                91
+                                                {subject.marks[1]}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                94.5
+                                                {cumulative[index]}
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
                                             </div> */}
                                         </div>
                                     </p>
-                                    <br/>
-                                    <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Hindi
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                02
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                90
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                99
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                94.5
-                                            </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
-                                        </div>
-                                    </p>
-                                    <br/>
-                                    <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Physics
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                02
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                92
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                93
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                92.5
-                                            </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
-                                        </div>
-                                    </p>
-                                    <br/>
-                                    <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Chemistry
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                01
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                91
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                -
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                81
-                                            </div>
-                                            
-                                        </div>
-                                    </p>
-                                    <br/>
-                                    <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Maths
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                01
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                98
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                -
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                98
-                                            </div>
-                                            
-                                        </div>
-                                    </p>
-                                    <br/>
-                                    <Link to="/Dashboard4_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    )
+                                    
+                                    })}
+                                    
+                                    
+                                    
+                                  
+                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.email,donordata:donortoken,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                         </div>
             </div>
@@ -280,14 +268,14 @@ const FeaturesSplit = ({
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column" style={{padding:"1%"}}>
                                     <center>
-                                    <img src={require('./../../assets/images/i3.jpg')} alt="" style={{width:"50%"}}/>
+                                    <img src={student.photo} alt="" style={{width:"50%"}}/>
                                     </center>
                                     <br/>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                    I need financial assistance to complete my school. I am a topper of my class. Everyone loves me because of my polite nature. Now things have changed, we have no resource to complete my schooling. I am looking for my virtual parent here who will take care of my studies. I will prove myself and will forever be grateful to person who will help me.<br/>
-                                    Guardian Age: 37<br/>Guardian gender: female<br/>Guardian phone: 8745372736<br/>Relation: Mother<br/>Address: neher par, faridabad
+                                    {student.intro}<br/>Guardian Name:{student.guardianName } <br/>
+                                    Guardian Age: {student.guardianAge}<br/>Guardian gender: {student.guardianGender}<br/>Guardian phone: {student.guardianPhone}<br/>Relation: {student.guardianRelation}<br/>Address: {student.address}
                                     </p><br/>
                                 </div>
                         </div>
@@ -302,4 +290,4 @@ const FeaturesSplit = ({
 FeaturesSplit.propTypes = propTypes;
 FeaturesSplit.defaultProps = defaultProps;
 
-export default FeaturesSplit;
+export default FeaturesSplit ;

@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react';
+import axios from "../../api/axios";
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
@@ -60,6 +62,55 @@ const Testimonial = ({
     alignTop && 'align-top'
   );
 
+
+  const userToken = {
+    "id" :"60c8e5237af1f560e4795ba0",
+    "name":"sakshi",
+    "age":20,
+    "gender":"female",
+    "address":"abc ",
+    "city":"indore",
+    "pin":452007,
+    "phone":"9348386468",
+    "email":"abc123@gmail.com",
+    "password":"abc123",
+    "adoptionCount":1,
+    "_v":0,
+    "students":["60d1953d5fcf144e544c1551"]
+}
+
+
+const [donorData,setDonorData]=useState('') 
+const [donorStudents,setDonorStudents]=useState([])
+
+
+useEffect(() => {
+    axios.get('/donorDashboard', {
+        headers : {
+            email:userToken.email,
+            authorization: userToken
+        }
+    }).then((response) => {
+            //console.log(response.data)
+            setDonorData(response.data)
+        })
+}, []);
+
+
+
+useEffect(() => {
+  axios.get('/adoptedStudents', {
+      headers : {
+          email:userToken.email,
+          authorization: userToken
+      }
+  }).then((response) => {
+          //console.log(response.data)
+          setDonorStudents(response.data)
+      })
+}, []);
+
+  
   return (
     <section
       {...props}
@@ -68,7 +119,6 @@ const Testimonial = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-
           <div className={splitClasses}>
           <div className="split-item">
           <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item" >
@@ -78,19 +128,19 @@ const Testimonial = ({
                 <p className="m-0">
                   <div className="row">
                       <div className="column">
-                        <a href="#" style={{textDecoration:"none", color:"black", marginRight:"3%"}}>eDOPTED</a>  2
+                        <a href="#" style={{textDecoration:"none", color:"black", marginRight:"3%"}}>eDOPTED</a>  {donorStudents.length}
                       </div>
                       <div className="column">
                       <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                       </div>
                   </div>
                   <br/>
-                  <div style={{marginBottom:"2%"}}>
-                      1. Pankaj MIshra
-                  </div>
-                  <div>
-                      2. Varsha Ganguly
-                  </div>
+                  {donorStudents.map((student,index)=>{
+                    return (<div>
+                      {index+1}. {student.name}
+                  </div>)
+                  })}
+
                   <br/>
                   <a href="/Feed_Donor" style={{color:"#3d946e", fontSize:"14px"}}>Adopt More</a>
                 </p>
@@ -127,12 +177,12 @@ const Testimonial = ({
                 <center>
                 <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem", textAlign:"center"}}/>
                 </center>
-                <h2 style={{margin:"0", color:"black", fontSize:"25px", textAlign:"center"}}>Piyush Rastogi</h2>
+                <h2 style={{margin:"0", color:"black", fontSize:"25px", textAlign:"center"}}>{donorData.name}</h2>
                 <br/>
                 <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"16px"}}>
-                  City : Delhi<br></br>
-                  Pin Code: 110094<br></br>
-                  Phone no.: 7685945324<br></br>
+                  City : {donorData.city}<br></br>
+                  Pin Code: {donorData.pin}<br></br>
+                  Phone no.: {donorData.phone}<br></br>
                 </p>
                 </div>
               </div>

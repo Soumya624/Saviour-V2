@@ -1,3 +1,6 @@
+import {useState, useEffect} from 'react';
+import axios from "../../api/axios";
+
 import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
@@ -62,6 +65,38 @@ const FeaturesSplit = ({
     paragraph: '-'
   };
 
+
+  const [userName,setUserName]=useState('')
+  const [password,setPassword]=useState('')
+  const [donortoken,setDonorToken]=useState('')
+  
+  
+  const handleuser = (e)=>{
+    setUserName(e.target.value)
+  }
+  const handlepassword=(e)=>{
+    setPassword(e.target.value)
+  }
+  const handlelogin=(e)=>{
+    e.preventDefault()
+    console.log(userName)
+    console.log(password)
+    
+    axios.get('/donorLogin', {
+      headers : {
+          email:userName,
+          password:password
+      }
+    }).then((response) => {
+          console.log(response.data)
+          setDonorToken(response.data)
+      })
+      
+      .catch((err)=>{
+        alert('password or username incorrect')
+      })
+    
+  } 
   return (
     <section
       {...props}
@@ -80,10 +115,10 @@ const FeaturesSplit = ({
                   Lorem Ipsum
                 </h3> */}
                 <p className="m-0">
-                  <form>
-                    <Input id="newsletter" type="email" hasIcon="right" placeholder="Your Username" name="username" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                  <form onSubmit={handlelogin}>
+                    <Input  onChange={handleuser} id="newsletter" type="email" value={userName} hasIcon="right" placeholder="Your Username" name="username" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
-                    <Input id="newsletter" type="password" hasIcon="right" placeholder="Your Password" name="password" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
+                    <Input  onChange={handlepassword} id="newsletter" type="password"  value={password} hasIcon="right" placeholder="Your Password" name="password" style={{ marginTop: "4%", borderRadius: "20px", borderColor: "grey" }}>
                     </Input>
                     <center>
                       <br />
@@ -101,7 +136,8 @@ const FeaturesSplit = ({
                     </center>
                     <br />
                     <center>
-                      <Link to="/Dashboard1_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</Link>
+                      <button type="submit" className="button button-primary button-wide-mobile button-sm"  style={{ backgroundColor: "#3d946e", borderRadius: "20px" }}>Login</button>
+          
                       <br /><br />{t('key30')} <a href="/Signup_Donor">{t('key27')}</a>
                     </center>
                   </form>
