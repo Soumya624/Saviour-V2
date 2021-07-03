@@ -75,6 +75,7 @@ const [donorStudents,setDonorStudents]=useState([])
 const [token,setToken]=useContext(GlobalState)
 const [email,setEmail]=useContext(Globalemail)
 
+console.log(token)
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
@@ -84,6 +85,9 @@ useEffect(() => {
     }).then((response) => {
             //console.log(response.data)
             setDonorData(response.data)
+        })
+        .catch((err)=>{
+          alert( 'forbidden link please login') 
         })
 }, []);
 

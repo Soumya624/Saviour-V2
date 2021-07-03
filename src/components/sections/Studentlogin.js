@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import classNames from 'classnames';
 import {SectionSplitProps} from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
-import {Link} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
 import {useTranslation} from "react-i18next";
 import axios from "../../api/axios";
-
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail'
 
 const propTypes = {
     ...SectionSplitProps.types
@@ -60,11 +61,14 @@ const FeaturesSplit = ({
         title: '',
         paragraph: '-'
     };
-
+    const [token,setToken]=useContext(GlobalState)
+    console.log(token)
+    const [username1, setUsername1]=useContext(Globalemail)
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [token, setToken] = useState({});
-
+    const [redirect,setRedirect] = useState('');
+    //const [token, setToken] = useState({});
+    
     const studentLoginHandler = (e)=>{
         e.preventDefault()
         if (!username){
@@ -76,11 +80,19 @@ const FeaturesSplit = ({
                 'password':password
             }
         }).then((response)=>{
-            console.log(response.data)
+            //console.log(response.data)
             setToken(response.data)
+            setUsername1(username)
+            setRedirect(true)
         })
+        //.catch((err)=>{
+          //  alert('password or username incorrect')
+        //})
     }
-
+    if (redirect){
+        return (<Redirect to={{pathname:"/Dashboard1_Student",state:{token:token,username:username}}} />)
+    }
+    else{
     return (
         <section
             {...props}
@@ -154,7 +166,7 @@ const FeaturesSplit = ({
         </section>
     );
 }
-
+                       }
 FeaturesSplit.propTypes = propTypes;
 FeaturesSplit.defaultProps = defaultProps;
 

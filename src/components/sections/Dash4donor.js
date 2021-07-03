@@ -81,7 +81,7 @@ const FeaturesSplit = ({
             authorization: token
         }
     }).then((response) => {
-            console.log(response.data)
+            //console.log(response.data)
             setDonorStudents(response.data)
         })
   }, []);
@@ -96,6 +96,7 @@ const FeaturesSplit = ({
             console.log(response.data)
             //console.log(index)
             setStudentMarklist(response.data)
+            //console.log('hi')
         
         })
   }, []);

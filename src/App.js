@@ -51,7 +51,7 @@ const App = () => {
   }, [location]);
 
 
-  const [token,setToken]=useState('')
+  
   return (
     <ScrollReveal
       ref={childRef}

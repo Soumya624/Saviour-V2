@@ -95,13 +95,19 @@ const userToken1 = {
   const [donorStudents,setDonorStudents]=useState([])
   const [studentMarklist,setStudentMarklist]=useState([])
   //const [stdEmail,setStdEmail]=useState('')
-  const [cumulative,setCumalative]=useState([])
-  //const [pieChart,setPieChart]=useState([])
+  //const [cumulative,setCumalative]=useState([])
+  //const [pieChart,setPieChart]=useState({})
   const [student,setStudent]=useState(props.location.state.student)
   //const [demail,setDemail]=useState(props.location.state.demail)  
   //setStdEmail(props.location.state.email)
   const [email,setEmail]=useContext(Globalemail)
   const [token,setToken]=useContext(GlobalState)
+  
+  const [cumulativeMarks, setCumulativeMarks] = useState([]);
+  const [percentageMarks, setPercentageMarks] = useState([]);   
+
+
+
   useEffect(() => {
     axios.get('/getMarks', {
         headers : {
@@ -109,30 +115,55 @@ const userToken1 = {
             authorization: token
         }
     }).then((response) => {
-            //console.log(response.data)
+            console.log(response.data)
             //console.log(index)
+            //console.log(student)
             setStudentMarklist(response.data)
+            let cumulative_marksheet = []
+                let percentage_marksheet = []
+                let total_marks = 0;
+                for (let i=0; i < response.data.length; i++){
+                    let subject = response.data[i]
+                    let sum_of_marks = 0;
+                    let j;
+                    for (j=0; j < subject.marks.length; j++){
+                        sum_of_marks += parseFloat(subject.marks[j])
+                    }
+                    let cumulative = sum_of_marks/j
+                    total_marks += cumulative
+                    cumulative_marksheet[i] = [subject.subject, cumulative]
+                }
+                percentage_marksheet[0] = ['Task', '100']
+                for (let k=1; k < cumulative_marksheet.length+1; k++){
+                    percentage_marksheet[k] = [cumulative_marksheet[k-1][0], (cumulative_marksheet[k-1][1]/total_marks)*100]
+                }
+                console.log(total_marks)
+                console.log(percentage_marksheet)
+                console.log(cumulative_marksheet)
+                setCumulativeMarks(cumulative_marksheet)
+                setPercentageMarks(percentage_marksheet)
             
         })
         .catch((err)=>{
             alert('forbidden')
         })
     
-    studentMarklist.map((subject,index)=>{
-        console.log(index)
-    })    
+       
 
   }, []);
   
-  useEffect(async () => {
-    await axios.get('/adoptedStudents', {
+  useEffect(() => {
+    axios.get('/adoptedStudents', {
         headers : {
             email:email,
             authorization: token
         }
     }).then((response) => {
-            console.log(response.data)
+            //console.log(response.data)
             setDonorStudents(response.data)
+            console.log(response.data.length)
+            
+          
         })
     
         
@@ -162,14 +193,7 @@ const userToken1 = {
                                         height={'100%'}
                                         chartType="PieChart"
                                         loader={<div>Loading Chart</div>}
-                                        data={[
-                                        ['Task', '100'],
-                                        ['English', 20.52],
-                                        ['Hindi', 20.52],
-                                        ['Physics', 20.08],
-                                        ['Chemistry', 17.58],
-                                        ['Math', 21.3],
-                                        ]}
+                                        data={percentageMarks}
                                         options={{
                                         title: 'Cumulative: 100',
                                         }}
@@ -215,7 +239,7 @@ const userToken1 = {
                                                 {subject.marks[1]}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                {cumulative[index]}
+                                                {subject.marks[1]}
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -229,7 +253,7 @@ const userToken1 = {
                                     
                                     
                                   
-                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.email,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.semail,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                         </div>
             </div>

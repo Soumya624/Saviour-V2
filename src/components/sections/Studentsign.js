@@ -67,6 +67,7 @@ const FeaturesSplit = ({
 
 
     const [studentName, setStudentName] = useState('');
+    const [studentUserName, setStudentUserName] = useState('');
     const [studentAge, setStudentAge] = useState('');
     const [studentGender, setStudentGender] = useState('');
     const [studentCity, setStudentCity] = useState('');
@@ -75,7 +76,6 @@ const FeaturesSplit = ({
     const [studentStandard, setStudentStandard] = useState('');
     const [studentIntroduction, setStudentIntroduction] = useState('');
     const [studentBody, setStudentBody] = useState('');
-
     const [guardianName, setGuardianName] = useState('');
     const [guardianAge, setGuardianAge] = useState('');
     const [guardianGender, setGuardianGender] = useState('');
@@ -85,9 +85,13 @@ const FeaturesSplit = ({
     const [guardianWants, setGuardianWants] = useState('');
     const [guardianNeeds, setGuardianNeeds] = useState('');
 
-    const signUpStudent = ()=>{
+    const signUpStudent = (e)=>{
+        e.preventDefault()
+        console.log("Hello")
         axios.post('/registerStudent', {
             name: studentName,
+            email: studentUserName+'@gmail.com',
+            password : studentUserName,
             age: studentAge,
             gender: studentGender,
             address: guardianAddress,
@@ -106,11 +110,29 @@ const FeaturesSplit = ({
             requirements: guardianWants,
         })
             .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+                console.log(response.data)
+                alert(response.data.message + "! Our executive will be reaching you soon for verification.")
+                setStudentName('')
+                setStudentUserName('')
+                setStudentAge('')
+                setStudentGender('')
+                setStudentCity('')
+                setStudentPincode('')
+                setStudentPhone('')
+                setStudentStandard('')
+                setStudentIntroduction('')
+                setStudentBody('')
+                setGuardianName('')
+                setGuardianAge('')
+                setGuardianGender('')
+                setGuardianPhone('')
+                setGuardianRelation('')
+                setGuardianAddress('')
+                setGuardianWants('')
+                setGuardianNeeds('')
+            }).catch(function (error) {
+            console.log(error);
+        });
     }
 
     return (
@@ -131,10 +153,20 @@ const FeaturesSplit = ({
                                      data-reveal-container=".split-item">
                                     <p className="m-0">
                                         <p className="m-0">Your Information</p>
-                                        <Input id="newsletter" type="name" value={studentName} onChange={(e)=>{setStudentName(e.target.value)}} hasIcon="right" placeholder="Your Name"
-                                               name="name"
-                                               style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
-                                        </Input>
+                                        <div className="row" style={{marginTop: "2%"}}>
+                                            <div className="column" style={{paddingRight: "1%"}}>
+                                                <Input id="newsletter" type="name" value={studentName} onChange={(e)=>{setStudentName(e.target.value)}} hasIcon="right" placeholder="Your Name"
+                                                       name="name"
+                                                       style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
+                                                </Input>
+                                            </div>
+                                            <div className="column" style={{paddingLeft: "1%"}}>
+                                                <Input id="newsletter" type="name" value={studentUserName} onChange={(e)=>{setStudentUserName(e.target.value)}} hasIcon="right" placeholder="Username"
+                                                       name="name"
+                                                       style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
+                                                </Input>
+                                            </div>
+                                        </div>
                                         <div className="row" style={{marginTop: "2%"}}>
                                             <div className="column" style={{paddingRight: "1%"}}>
                                                 <Input id="newsletter" type="name" hasIcon="right"
@@ -308,7 +340,6 @@ const FeaturesSplit = ({
               <br /> */}
                             <center>
                                 <button type="submit" className="button button-primary button-wide-mobile button-sm"
-                                      onClick=""
                                       style={{backgroundColor: "#3d946e", borderRadius: "20px"}}>Signup</button>
                                 <br/><br/>{t('key29')} <a href="/Login_Student">{t('key28')}</a>
                             </center>

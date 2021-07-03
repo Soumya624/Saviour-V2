@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -62,6 +62,11 @@ const FeaturesSplit = ({
     title: '',
     paragraph: '-'
   };
+
+  const [name, setName] = useState('');
+  const [city, setCity] = useState('');
+  const [pin, setPin] = useState('');
+  const [phone, setPhone] = useState('');
 
   return (
     <section
