@@ -5,7 +5,7 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
+import { Link ,Redirect} from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import axios from "../../api/axios";
@@ -74,6 +74,7 @@ const [donorStudents,setDonorStudents]=useState([])
 
 const [token,setToken]=useContext(GlobalState)
 const [email,setEmail]=useContext(Globalemail)
+const [redirecthome,setRedirectHome]=useState(false)
 
 console.log(token)
 useEffect(() => {
@@ -87,7 +88,7 @@ useEffect(() => {
             setDonorData(response.data)
         })
         .catch((err)=>{
-          alert( 'forbidden link please login') 
+          setRedirectHome(true)
         })
 }, []);
 
@@ -100,11 +101,16 @@ useEffect(() => {
         authorization: token
       }
   }).then((response) => {
-          console.log(response.data)
+          //console.log(response.data)
           setDonorStudents(response.data)
+      }).catch((err)=>{
+        setRedirectHome(true)
       })
 }, []);
-
+if (redirecthome){
+  return(<Redirect to={{pathname:"/Login_Donor",state:{}}} />)
+}
+else{
 
   return (
     <section
@@ -252,7 +258,9 @@ useEffect(() => {
       </div>
     </section>
   );
+                }
 }
+
 
 FeaturesSplit.propTypes = propTypes;
 FeaturesSplit.defaultProps = defaultProps;

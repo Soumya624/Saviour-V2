@@ -6,7 +6,7 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import { Chart } from "react-google-charts";
@@ -105,7 +105,7 @@ const userToken1 = {
   
   const [cumulativeMarks, setCumulativeMarks] = useState([]);
   const [percentageMarks, setPercentageMarks] = useState([]);   
-
+  const [redirecthome,setRedirectHome]=useState(false)
 
 
   useEffect(() => {
@@ -121,6 +121,7 @@ const userToken1 = {
             setStudentMarklist(response.data)
             let cumulative_marksheet = []
                 let percentage_marksheet = []
+                
                 let total_marks = 0;
                 for (let i=0; i < response.data.length; i++){
                     let subject = response.data[i]
@@ -132,21 +133,22 @@ const userToken1 = {
                     let cumulative = sum_of_marks/j
                     total_marks += cumulative
                     cumulative_marksheet[i] = [subject.subject, cumulative]
+                    
                 }
                 percentage_marksheet[0] = ['Task', '100']
                 for (let k=1; k < cumulative_marksheet.length+1; k++){
                     percentage_marksheet[k] = [cumulative_marksheet[k-1][0], (cumulative_marksheet[k-1][1]/total_marks)*100]
                 }
-                console.log(total_marks)
-                console.log(percentage_marksheet)
-                console.log(cumulative_marksheet)
+                //console.log(total_marks)
+                //console.log(percentage_marksheet)
+                //console.log(cumulative_marksheet)
                 setCumulativeMarks(cumulative_marksheet)
                 setPercentageMarks(percentage_marksheet)
             
         })
         .catch((err)=>{
-            alert('forbidden')
-        })
+            setRedirectHome(true)
+          })
     
        
 
@@ -161,15 +163,20 @@ const userToken1 = {
     }).then((response) => {
             //console.log(response.data)
             setDonorStudents(response.data)
-            console.log(response.data.length)
+            //console.log(response.data.length)
             
           
-        })
+        }).catch((err)=>{
+            setRedirectHome(true)
+          })
     
         
 
   }, []);
-  
+  if (redirecthome){
+    return(<Redirect to={{pathname:"/Login_Donor",state:{}}} />)
+  }
+  else{
   //const index = this.props.location.state.prodIndex;
   return (
     <section
@@ -224,6 +231,7 @@ const userToken1 = {
                                     </p>
                                     <br/>
                                     {studentMarklist.map((subject,index)=>{
+                                        let cumulative = (parseFloat(subject.marks[0]) + parseFloat(subject.marks[1]))/2
                                         return (<p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                                         <div className="row">
                                             <div className="column2" style={{textAlign:"left"}}>
@@ -239,7 +247,7 @@ const userToken1 = {
                                                 {subject.marks[1]}
                                             </div>
                                             <div className="column2" style={{textAlign:"left"}}>
-                                                {subject.marks[1]}
+                                                {cumulative}
                                             </div>
                                             {/* <div className="column2" style={{textAlign:"center"}}>
                                                 XX
@@ -321,6 +329,7 @@ const userToken1 = {
       </div>
     </section>
   );
+                                }
 }
 
 FeaturesSplit.propTypes = propTypes;

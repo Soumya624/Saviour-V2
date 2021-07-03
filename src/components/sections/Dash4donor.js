@@ -7,7 +7,7 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
+import { Link ,Redirect} from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import { Chart } from "react-google-charts";
@@ -64,9 +64,12 @@ const FeaturesSplit = ({
     title: '',
     paragraph: ''
   };
-
-
+  
+ 
+  
+  
   const [student,setStudent]=useState(props.location.state.student)
+  
   //const [donortoken,setDonortoken]=useState(props.location.state.donordata)
   const [studentMarklist,setStudentMarklist]=useState([])
   const [donorStudents,setDonorStudents]=useState([])
@@ -74,7 +77,11 @@ const FeaturesSplit = ({
 
   const [token,setToken]=useContext(GlobalState)
   const [email,setEmail]=useContext(Globalemail)
+  const [cumulativeMarks, setCumulativeMarks] = useState([]);
+  const [percentageMarks, setPercentageMarks] = useState([]);
+  const [redirecthome,setRedirectHome]=useState(false)
   useEffect(() => {
+      
     axios.get('/adoptedStudents', {
         headers : {
             email:email,
@@ -83,7 +90,9 @@ const FeaturesSplit = ({
     }).then((response) => {
             //console.log(response.data)
             setDonorStudents(response.data)
-        })
+        }).catch((err)=>{
+            setRedirectHome(true)
+          })
   }, []);
   
   useEffect(() => {
@@ -93,13 +102,47 @@ const FeaturesSplit = ({
             authorization: token
         }
     }).then((response) => {
-            console.log(response.data)
+            //console.log(response.data)
             //console.log(index)
             setStudentMarklist(response.data)
             //console.log('hi')
+            let cumulative_marksheet = []
+                let percentage_marksheet = []
+                
+                let total_marks = 0;
+                for (let i=0; i < response.data.length; i++){
+                    let subject = response.data[i]
+                    let sum_of_marks = 0;
+                    let j;
+                    for (j=0; j < subject.marks.length; j++){
+                        sum_of_marks += parseFloat(subject.marks[j])
+                    }
+                    let cumulative = sum_of_marks/j
+                    total_marks += cumulative
+                    cumulative_marksheet[i] = [subject.subject, cumulative]
+                    
+                }
+                percentage_marksheet[0] = ['Task', '100']
+                for (let k=1; k < cumulative_marksheet.length+1; k++){
+                    percentage_marksheet[k] = [cumulative_marksheet[k-1][0], (cumulative_marksheet[k-1][1]/total_marks)*100]
+                }
+                //console.log(total_marks)
+                //console.log(percentage_marksheet)
+                //console.log(cumulative_marksheet)
+                setCumulativeMarks(cumulative_marksheet)
+                setPercentageMarks(percentage_marksheet)
+            
         
-        })
+        }).catch((err)=>{
+            setRedirectHome(true)
+          })
   }, []);
+
+  if (redirecthome){
+    return(<Redirect to={{pathname:"/Login_Donor",state:{}}} />)
+  }
+  else{
+
   return (
     <section
       {...props}
@@ -118,14 +161,7 @@ const FeaturesSplit = ({
                                         height={'100%'}
                                         chartType="PieChart"
                                         loader={<div>Loading Chart</div>}
-                                        data={[
-                                        ['Task', '100'],
-                                        ['English', 20.52],
-                                        ['Hindi', 20.52],
-                                        ['Physics', 20.08],
-                                        ['Chemistry', 17.58],
-                                        ['Math', 21.3],
-                                        ]}
+                                        data={percentageMarks}
                                         options={{
                                         title: 'Cumulative: 100',
                                         }}
@@ -206,71 +242,44 @@ const FeaturesSplit = ({
                         <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
                         
                         {studentMarklist.map((subject,index)=>{
-                            if (index<2){
+                            if (index>=2){
+                                return(
+                                    <div className="row">
+                                    <div className="column2" style={{textAlign:"left"}}>
+                                        {subject.subject}
+                                    </div>
+                                    <div className="column2" style={{textAlign:"left"}}>
+                                        {index}
+                                    </div>
+                                    <div className="column2" style={{textAlign:"left"}}>
+                                        {subject.marks[0]}
+                                    </div>
+                                    <div className="column2" style={{textAlign:"left"}}>
+                                        {subject.marks[1]}
+                                    </div>
+                                    <div className="column2" style={{textAlign:"left"}}>
+                                        {subject.marks[1]}
+                                    </div>
+                                    {/* <div className="column2" style={{textAlign:"center"}}>
+                                        XX
+                                    </div> */}
+                                </div>
+                                  
+                                
+                            
+                            
+                                
+                            
+                                )
+                            }
+                            else{
                                 return
                             }
-                            else{}
                             
                         })}
-                        <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Physics
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                02
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                92
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                93
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                92.5
-                                            </div>
-                                            {/* <div className="column2" style={{textAlign:"center"}}>
-                                                XX
-                                            </div> */}
-                                        </div>
-                            <br/>
-                           
-                            <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Chemistry
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                01
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                91
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                -
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                81
-                                            </div>
-                                            
-                                        </div>
-                            <br/>
-                            <div className="row">
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                Maths
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                01
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                98
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                -
-                                            </div>
-                                            <div className="column2" style={{textAlign:"left"}}>
-                                                98
-                                            </div>
-                                            
-                                        </div>
+                        
+                            
+                            
                         </p>
                     </div>
                 </p>
@@ -300,6 +309,7 @@ const FeaturesSplit = ({
       </div>
     </section>
   );
+                                        }
 }
 
 FeaturesSplit.propTypes = propTypes;

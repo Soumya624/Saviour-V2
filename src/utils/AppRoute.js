@@ -15,13 +15,15 @@ const AppRoute = ({
     <Route
       {...rest}
       render={props => (
-        <Layout>
-          <Globalemail.Provider value={[email,setEmail]}>
+        <Globalemail.Provider value={[email,setEmail]}>
           <GlobalState.Provider value={[token, setToken]}> 
+        <Layout>
+          
           <Component {...props} />
-          </GlobalState.Provider>
-          </Globalemail.Provider> 
+          
         </Layout>
+        </GlobalState.Provider>
+          </Globalemail.Provider> 
       )} />
   );
 }

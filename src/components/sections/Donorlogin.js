@@ -86,8 +86,8 @@ const FeaturesSplit = ({
   }
   const handlelogin=(e)=>{
     e.preventDefault()
-    console.log(userName)
-    console.log(password)
+    //console.log(userName)
+    //console.log(password)
     
     axios.get('/donorLogin', {
       headers : {
@@ -95,7 +95,7 @@ const FeaturesSplit = ({
           password:password
       }
     }).then((response) => {
-          console.log(response.data)
+          //console.log(response.data)
           setDonorToken(response.data)
           setToken(response.data.token)
           setEmail(userName)

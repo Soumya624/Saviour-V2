@@ -63,7 +63,7 @@ const FeaturesSplit = ({
     paragraph: ''
   };
 
-    console.log(props.location)
+    //console.log(props.location)
     const [gtoken,setGtoken]=useContext(GlobalState)
     const [gemail,setGemail]=useContext(Globalemail)
     const [Token,setToken]=useState('bearer'+' '+ gtoken.token)
@@ -75,7 +75,7 @@ const FeaturesSplit = ({
     //const [userToken, setUserToken] = useState(
        // {"_id":"60c8c89c4604cf597c04a824","name":"sakshi","age":20,"gender":"female","address":"abc ","city":"indore","pin":452007,"phone":"9348386468","guardianName":"cvhblj","guardianAge":12,"guardianGender":"male","guardianPhone":"5628462837","guardianRelation":"uncle","grade":12,"intro":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisi augue, scelerisque ac risus eu, ornare porta ex. Nulla fringilla quam vel nunc vulputate, in cursus purus tempus. Donec leo augue, faucibus eget lacinia quis, sagittis vel diam. Integer aliquam cursus posuere. Vivamus eget dignissim libero. Aliquam sodales massa dui,","body":"uigvouwb","aim":"doctor","requirements":"money","email":"aj@gmail.com","password":"$2a$10$lY7OoYv4F6xyYKE82WQy7ed7qtSapG1Wv9i7HhPZrofnJlXSlWMh.","parent_id":"60c8e94e2aeafe3b84051cc7","__v":0,"photo":"https://images.ctfassets.net/p0qf7j048i0q/6UM0DTikFfdNvAu5jym5x9/c7ab7310b07ff8613ec0232135d5d9c9/G1155346217.jpg"}
     //)
-    console.log(Token)
+    //console.log(Token)
     useEffect(() => {
         //console.log(Token)
         axios.get('/getMarks', {
@@ -105,8 +105,8 @@ const FeaturesSplit = ({
                 for (let k=1; k < cumulative_marksheet.length+1; k++){
                     percentage_marksheet[k] = [cumulative_marksheet[k-1][0], (cumulative_marksheet[k-1][1]/total_marks)*100]
                 }
-                console.log(percentage_marksheet)
-                console.log(cumulative_marksheet)
+                //console.log(percentage_marksheet)
+                //console.log(cumulative_marksheet)
                 setCumulativeMarks(cumulative_marksheet)
                 setPercentageMarks(percentage_marksheet)
             })
@@ -118,7 +118,7 @@ const FeaturesSplit = ({
             email : email
           }
       }).then((response) => {
-              console.log(response.data)
+              //console.log(response.data)
               setUserToken(response.data)
   
           })

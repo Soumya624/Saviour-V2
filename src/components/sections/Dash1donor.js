@@ -4,7 +4,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import GlobalState from "../../contexts/globalstate"
@@ -65,33 +65,19 @@ const Testimonial = ({
   );
 
 
-  const userToken = {
-    "id" :"60c8e5237af1f560e4795ba0",
-    "name":"sakshi",
-    "age":20,
-    "gender":"female",
-    "address":"abc ",
-    "city":"indore",
-    "pin":452007,
-    "phone":"9348386468",
-    "email":"abc123@gmail.com",
-    "password":"abc123",
-    "adoptionCount":1,
-    "_v":0,
-    "students":["60d1953d5fcf144e544c1551"]
-}
+  
 
-console.log(props.location)
+
 
 const [token,setToken]=useContext(GlobalState)
-console.log(token)
+
 const [email,setEmail]=useContext(Globalemail)
 const [donorToken,setDonorToken]=useState('bearer'+' '+ token)
 const [donorData,setDonorData]=useState('') 
 const [donorStudents,setDonorStudents]=useState([])
 //const [email1,setEmail1]=useState(props.location.state.email)
+const [redirecthome,setRedirectHome]=useState(false)
 
-console.log(token)
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
@@ -104,6 +90,8 @@ useEffect(() => {
             setDonorData(response.data)
             setToken(donorToken)
 
+        }).catch((err)=>{
+          setRedirectHome(true)
         })
 }, []);
 
@@ -116,12 +104,17 @@ useEffect(() => {
         authorization: donorToken
       }
   }).then((response) => {
-          console.log(response.data)
+          //console.log(response.data)
           setDonorStudents(response.data)
+      }).catch((err)=>{
+        setRedirectHome(true)
       })
 }, []);
 
-  
+  if (redirecthome){
+    return(<Redirect to={{pathname:"/Login_Donor",state:{}}} />)
+  }
+  else{
   return (
     <section
       {...props}
@@ -206,7 +199,8 @@ useEffect(() => {
     </section>
   );
 }
-
+}
+  
 Testimonial.propTypes = propTypes;
 Testimonial.defaultProps = defaultProps;
 

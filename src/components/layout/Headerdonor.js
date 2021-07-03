@@ -1,11 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect,useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 import Logo from './partials/Logo';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import { x } from '../sections/Hero';
+
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
+
 console.log(`${x}`);
 
 const propTypes = {
@@ -38,6 +42,10 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+
+  const [token,setToken]=useContext(GlobalState)
+  const [email,setEmail]=useContext(Globalemail)
+  const [redirecthome,setRedirectHome]=useState(false);
 
   useEffect(() => {
     isActive && openMenu();
@@ -79,7 +87,19 @@ const Header = ({
     bottomOuterDivider && 'has-bottom-divider',
     className
   );
+  
+  const logouthandler=()=>{
+    setToken('')
+    setEmail('')
+    setRedirectHome(true)
+  }
 
+  if (redirecthome){
+    return(<Redirect to={{pathname:"/",state:{}}} />)
+  }
+  else{
+
+  
   return (
     <header
       {...props}
@@ -132,7 +152,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/Login_Donor" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu} style={{backgroundColor:"#3d946e"}}>{t('key32')}</Link>
+                        <button onClick={logouthandler}  className="button button-primary button-wide-mobile button-sm"  style={{backgroundColor:"#3d946e"}}>{t('key32')}</button>
                       </li>
                     </ul>}
                 </div>
@@ -142,6 +162,7 @@ const Header = ({
       </div>
     </header>
   );
+}
 }
 
 Header.propTypes = propTypes;
