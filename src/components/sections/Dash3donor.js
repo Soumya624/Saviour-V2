@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
 import axios from "../../api/axios";
 import React from 'react';
 import classNames from 'classnames';
@@ -11,8 +11,8 @@ import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import { Chart } from "react-google-charts";
 import { constant } from 'lodash';
-
-
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
 
 //const index = this.props.location.state.prodIndex;
 const propTypes = {
@@ -91,42 +91,52 @@ const userToken1 = {
     email: 'aj@gmail.com',
     phone: '9348386468'
 } */
-  const [donortoken,setDonortoken]=useState(props.location.state.donortoken)
+  //const [donortoken,setDonortoken]=useState(props.location.state.donortoken)
   const [donorStudents,setDonorStudents]=useState([])
   const [studentMarklist,setStudentMarklist]=useState([])
-  const [stdEmail,setStdEmail]=useState('')
+  //const [stdEmail,setStdEmail]=useState('')
   const [cumulative,setCumalative]=useState([])
-  const [pieChart,setPieChart]=useState([])
+  //const [pieChart,setPieChart]=useState([])
   const [student,setStudent]=useState(props.location.state.student)
-  const [demail,setDemail]=useState(props.location.state.demail)  
+  //const [demail,setDemail]=useState(props.location.state.demail)  
   //setStdEmail(props.location.state.email)
-  
- 
+  const [email,setEmail]=useContext(Globalemail)
+  const [token,setToken]=useContext(GlobalState)
   useEffect(() => {
     axios.get('/getMarks', {
         headers : {
             email:props.location.state.semail,
-            authorization: donortoken
+            authorization: token
         }
     }).then((response) => {
             //console.log(response.data)
             //console.log(index)
             setStudentMarklist(response.data)
             
-        
         })
+        .catch((err)=>{
+            alert('forbidden')
+        })
+    
+    studentMarklist.map((subject,index)=>{
+        console.log(index)
+    })    
+
   }, []);
   
-  useEffect(() => {
-    axios.get('/adoptedStudents', {
+  useEffect(async () => {
+    await axios.get('/adoptedStudents', {
         headers : {
-            email:demail,
-            authorization: donortoken
+            email:email,
+            authorization: token
         }
     }).then((response) => {
             console.log(response.data)
             setDonorStudents(response.data)
         })
+    
+        
+
   }, []);
   
   //const index = this.props.location.state.prodIndex;
@@ -219,7 +229,7 @@ const userToken1 = {
                                     
                                     
                                   
-                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.email,donordata:donortoken,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.email,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                         </div>
             </div>

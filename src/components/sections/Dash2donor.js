@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
 import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
@@ -10,6 +10,9 @@ import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import axios from "../../api/axios";
 
+
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
 const propTypes = {
   ...SectionSplitProps.types
 }
@@ -63,16 +66,20 @@ const FeaturesSplit = ({
   
     
 
-const [donorToken,setDonorToken]=useState(props.location.state.donortoken)
+//const [donorToken,setDonorToken]=useState(props.location.state.donortoken)
 const [donorData,setDonorData]=useState('') 
 const [donorStudents,setDonorStudents]=useState([])
-const [email,setEmail]=useState(props.location.state.email)
+//const [email,setEmail]=useState(props.location.state.email)
+
+
+const [token,setToken]=useContext(GlobalState)
+const [email,setEmail]=useContext(Globalemail)
 
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
             email:email,
-            authorization: donorToken
+            authorization: token
         }
     }).then((response) => {
             //console.log(response.data)
@@ -86,7 +93,7 @@ useEffect(() => {
   axios.get('/adoptedStudents', {
       headers : {
         email:email,
-        authorization: donorData
+        authorization: token
       }
   }).then((response) => {
           console.log(response.data)

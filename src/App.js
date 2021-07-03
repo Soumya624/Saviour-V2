@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
@@ -28,7 +28,7 @@ import SignupStudent from './views/SignupStudent';
 import Dash1Student from './views/DashboardprimaryStudent';
 
 import {Route} from 'react-router-dom' 
-
+import GlobalState from './contexts/globalstate.js'
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -50,6 +50,8 @@ const App = () => {
     trackPage(page);
   }, [location]);
 
+
+  const [token,setToken]=useState('')
   return (
     <ScrollReveal
       ref={childRef}

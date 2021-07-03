@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
 import axios from "../../api/axios";
 
 import React from 'react';
@@ -11,7 +11,8 @@ import { Link } from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
 import { Chart } from "react-google-charts";
-
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
 const propTypes = {
   ...SectionSplitProps.types
 }
@@ -66,14 +67,18 @@ const FeaturesSplit = ({
 
 
   const [student,setStudent]=useState(props.location.state.student)
-  const [donortoken,setDonortoken]=useState(props.location.state.donordata)
+  //const [donortoken,setDonortoken]=useState(props.location.state.donordata)
   const [studentMarklist,setStudentMarklist]=useState([])
   const [donorStudents,setDonorStudents]=useState([])
+
+
+  const [token,setToken]=useContext(GlobalState)
+  const [email,setEmail]=useContext(Globalemail)
   useEffect(() => {
     axios.get('/adoptedStudents', {
         headers : {
-            email:donortoken.email,
-            authorization: donortoken
+            email:email,
+            authorization: token
         }
     }).then((response) => {
             console.log(response.data)
@@ -85,7 +90,7 @@ const FeaturesSplit = ({
     axios.get('/getMarks', {
         headers : {
             email:props.location.state.email,
-            authorization: donortoken
+            authorization: token
         }
     }).then((response) => {
             console.log(response.data)

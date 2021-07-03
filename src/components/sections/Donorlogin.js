@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
 import axios from "../../api/axios";
 
 import React from 'react';
@@ -11,6 +11,8 @@ import { Link ,Redirect} from 'react-router-dom';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import { x } from './Hero';
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
 console.log(`${x}`);
 
 const propTypes = {
@@ -65,12 +67,17 @@ const FeaturesSplit = ({
     paragraph: '-'
   };
 
-
+  
   const [userName,setUserName]=useState('')
   const [password,setPassword]=useState('')
   const [donortoken,setDonorToken]=useState('')
   const [redirect,setRedirect]=useState(false)
+  //const [donortoken,setDonorToken]=useContext(GlobalState)
+
+  const [token,setToken]=useContext(GlobalState)
+  const [email,setEmail]=useContext(Globalemail)
   
+
   const handleuser = (e)=>{
     setUserName(e.target.value)
   }
@@ -90,6 +97,8 @@ const FeaturesSplit = ({
     }).then((response) => {
           console.log(response.data)
           setDonorToken(response.data)
+          setToken(response.data.token)
+          setEmail(userName)
           setRedirect(true)
               
       })

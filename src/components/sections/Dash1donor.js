@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
 import axios from "../../api/axios";
 import React from 'react';
 import classNames from 'classnames';
@@ -7,6 +7,8 @@ import SectionHeader from './partials/SectionHeader';
 import { Link } from 'react-router-dom';
 import './style.css'
 import FooterSocial from '../layout/partials/FooterSocial';
+import GlobalState from "../../contexts/globalstate"
+import Globalemail from '../../contexts/globalemail';
 const propTypes = {
   ...SectionTilesProps.types
 }
@@ -80,21 +82,28 @@ const Testimonial = ({
 }
 
 console.log(props.location)
-const [donorToken,setDonorToken]=useState('bearer'+' '+ props.location.state.donortoken.token)
+
+const [token,setToken]=useContext(GlobalState)
+console.log(token)
+const [email,setEmail]=useContext(Globalemail)
+const [donorToken,setDonorToken]=useState('bearer'+' '+ token)
 const [donorData,setDonorData]=useState('') 
 const [donorStudents,setDonorStudents]=useState([])
-const [email,setEmail]=useState(props.location.state.email)
+//const [email1,setEmail1]=useState(props.location.state.email)
+
 
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
             email:email,
-            authorization: donorData
+            authorization: donorToken
         }
     }).then((response) => {
             //console.log(response.data)
-            console.log(donorToken)
+            //console.log(donorToken)
             setDonorData(response.data)
+            setToken(donorToken)
+
         })
 }, []);
 
@@ -104,7 +113,7 @@ useEffect(() => {
   axios.get('/adoptedStudents', {
       headers : {
         email:email,
-        authorization: donorData
+        authorization: donorToken
       }
   }).then((response) => {
           console.log(response.data)
