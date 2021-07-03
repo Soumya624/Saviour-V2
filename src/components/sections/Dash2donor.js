@@ -60,31 +60,19 @@ const FeaturesSplit = ({
     paragraph: ''
   };
 
-  const userToken = {
-    "id" :"60c8e5237af1f560e4795ba0",
-    "name":"sakshi",
-    "age":20,
-    "gender":"female",
-    "address":"abc ",
-    "city":"indore",
-    "pin":452007,
-    "phone":"9348386468",
-    "email":"abc123@gmail.com",
-    "password":"abc123",
-    "adoptionCount":1,
-    "_v":0,
-    "students":["60d1953d5fcf144e544c1551"]
-}
+  
+    
 
-
+const [donorToken,setDonorToken]=useState(props.location.state.donortoken)
 const [donorData,setDonorData]=useState('') 
 const [donorStudents,setDonorStudents]=useState([])
+const [email,setEmail]=useState(props.location.state.email)
 
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
-            email:userToken.email,
-            authorization: userToken
+            email:email,
+            authorization: donorToken
         }
     }).then((response) => {
             //console.log(response.data)
@@ -97,8 +85,8 @@ useEffect(() => {
 useEffect(() => {
   axios.get('/adoptedStudents', {
       headers : {
-          email:userToken.email,
-          authorization: userToken
+        email:email,
+        authorization: donorData
       }
   }).then((response) => {
           console.log(response.data)
@@ -134,7 +122,7 @@ useEffect(() => {
                                     </p>
                                     <br/>
                                     <br/>
-                                    <Link to={{pathname:"/Dashboard3_Donor",state:{email:student.email,donordata:donorData,student:student}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    <Link to={{pathname:"/Dashboard3_Donor",state:{demail:email ,semail:student.email,donordata:donorData,student:student}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>

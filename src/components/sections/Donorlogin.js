@@ -7,7 +7,7 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
+import { Link ,Redirect} from 'react-router-dom';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import { x } from './Hero';
@@ -69,7 +69,7 @@ const FeaturesSplit = ({
   const [userName,setUserName]=useState('')
   const [password,setPassword]=useState('')
   const [donortoken,setDonorToken]=useState('')
-  
+  const [redirect,setRedirect]=useState(false)
   
   const handleuser = (e)=>{
     setUserName(e.target.value)
@@ -90,6 +90,8 @@ const FeaturesSplit = ({
     }).then((response) => {
           console.log(response.data)
           setDonorToken(response.data)
+          setRedirect(true)
+              
       })
       
       .catch((err)=>{
@@ -97,7 +99,12 @@ const FeaturesSplit = ({
       })
     
   } 
+  if (redirect){
+    return (<Redirect to={{pathname:"/Dashboard1_Donor",state:{donortoken:donortoken,email:userName}}} />)
+  }
+  else{
   return (
+    
     <section
       {...props}
       className={outerClasses}
@@ -162,6 +169,7 @@ const FeaturesSplit = ({
       </div>
     </section>
   );
+                }
 }
 
 FeaturesSplit.propTypes = propTypes;

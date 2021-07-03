@@ -91,26 +91,28 @@ const userToken1 = {
     email: 'aj@gmail.com',
     phone: '9348386468'
 } */
-  const [donortoken,setDonortoken]=useState(props.location.state.donordata)
+  const [donortoken,setDonortoken]=useState(props.location.state.donortoken)
   const [donorStudents,setDonorStudents]=useState([])
   const [studentMarklist,setStudentMarklist]=useState([])
   const [stdEmail,setStdEmail]=useState('')
   const [cumulative,setCumalative]=useState([])
   const [pieChart,setPieChart]=useState([])
   const [student,setStudent]=useState(props.location.state.student)
+  const [demail,setDemail]=useState(props.location.state.demail)  
   //setStdEmail(props.location.state.email)
   
-
+ 
   useEffect(() => {
     axios.get('/getMarks', {
         headers : {
-            email:props.location.state.email,
+            email:props.location.state.semail,
             authorization: donortoken
         }
     }).then((response) => {
             //console.log(response.data)
             //console.log(index)
             setStudentMarklist(response.data)
+            
         
         })
   }, []);
@@ -118,7 +120,7 @@ const userToken1 = {
   useEffect(() => {
     axios.get('/adoptedStudents', {
         headers : {
-            email:donortoken.email,
+            email:demail,
             authorization: donortoken
         }
     }).then((response) => {

@@ -79,19 +79,21 @@ const Testimonial = ({
     "students":["60d1953d5fcf144e544c1551"]
 }
 
-
+console.log(props.location)
+const [donorToken,setDonorToken]=useState('bearer'+' '+ props.location.state.donortoken.token)
 const [donorData,setDonorData]=useState('') 
 const [donorStudents,setDonorStudents]=useState([])
-
+const [email,setEmail]=useState(props.location.state.email)
 
 useEffect(() => {
     axios.get('/donorDashboard', {
         headers : {
-            email:userToken.email,
-            authorization: userToken
+            email:email,
+            authorization: donorData
         }
     }).then((response) => {
             //console.log(response.data)
+            console.log(donorToken)
             setDonorData(response.data)
         })
 }, []);
@@ -101,11 +103,11 @@ useEffect(() => {
 useEffect(() => {
   axios.get('/adoptedStudents', {
       headers : {
-          email:userToken.email,
-          authorization: userToken
+        email:email,
+        authorization: donorData
       }
   }).then((response) => {
-          //console.log(response.data)
+          console.log(response.data)
           setDonorStudents(response.data)
       })
 }, []);
@@ -131,7 +133,7 @@ useEffect(() => {
                         <a href="#" style={{textDecoration:"none", color:"black", marginRight:"3%"}}>eDOPTED</a>  {donorStudents.length}
                       </div>
                       <div className="column">
-                      <Link to="/Dashboard2_Donor" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                      <Link to={{pathname:"/Dashboard2_Donor",state:{donortoken:donorToken,donorData:donorData, email:email}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
                       </div>
                   </div>
                   <br/>
